@@ -33,3 +33,13 @@ create table tblAutoresLivros(
 	foreign key(LivID) references tblLivros(LivID),
 	foreign key(AutID) references tblAutores(AutID)
 );
+
+create table tblUsuarios(
+	UserID			int				not null	primary key,
+	UserCPF			decimal(11,0)	not null,
+	UserNome		varchar(70)		not null,
+	UserSenha		varchar(20)		not null,
+	UserEmail		varchar(80)		not null,
+	UserTelefone	decimal(11,0)	not null,
+	UserObs			varchar(100)		null
+);

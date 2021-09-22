@@ -16,7 +16,8 @@ namespace wfaSysEdit
         {
             informacao,
             aviso,
-            erro
+            erro,
+            sucesso
         }
 
         public static void Mensagem(String mensagem, tipoMensagem tipo)
@@ -33,6 +34,10 @@ namespace wfaSysEdit
 
                 case tipoMensagem.erro:
                     MessageBox.Show(mensagem,"ERRO",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    break;
+
+                case tipoMensagem.sucesso:
+                    MessageBox.Show(mensagem, "Sucesso", MessageBoxButtons.OK);
                     break;
             }
         }

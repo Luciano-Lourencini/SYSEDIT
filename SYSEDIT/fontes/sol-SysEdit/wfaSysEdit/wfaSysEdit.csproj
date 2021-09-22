@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsIsNull.cs" />
+    <Compile Include="clsLimpar.cs" />
     <Compile Include="clsMensagens.cs" />
     <Compile Include="frmAutores.cs">
       <SubType>Form</SubType>
@@ -125,6 +127,24 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuariosEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuariosEditar.Designer.cs">
+      <DependentUpon>frmUsuariosEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuariosNovo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuariosNovo.Designer.cs">
+      <DependentUpon>frmUsuariosNovo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAutores.resx">
@@ -165,6 +185,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuariosEditar.resx">
+      <DependentUpon>frmUsuariosEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuariosNovo.resx">
+      <DependentUpon>frmUsuariosNovo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

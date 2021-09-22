@@ -34,5 +34,11 @@ namespace wfaSysEdit
             frmAutores autores = new frmAutores();
             autores.ShowDialog();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuarios usuarios = new frmUsuarios();
+            usuarios.ShowDialog();
+        }
     }
 }

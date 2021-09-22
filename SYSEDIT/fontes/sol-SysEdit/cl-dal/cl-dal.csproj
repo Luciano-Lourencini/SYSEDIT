@@ -57,6 +57,7 @@
     <Compile Include="clsConexao.cs" />
     <Compile Include="clsEditorasDAL.cs" />
     <Compile Include="clsLivrosDAL.cs" />
+    <Compile Include="clsUsuariosDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -45,6 +45,7 @@
     <Compile Include="clsEditoras.cs" />
     <Compile Include="clsLivros.cs" />
     <Compile Include="clsModelo.cs" />
+    <Compile Include="clsUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
