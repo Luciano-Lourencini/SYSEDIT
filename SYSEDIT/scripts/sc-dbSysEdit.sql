@@ -13,7 +13,7 @@ create table tblLivros(
 	LivID				int			not null	primary key,
 	LivNome				varchar(50)	not null,
 	LivAnoPublicacao	int			not null,
-	LivISBN				decimal(14)	not null,
+	LivISBN				decimal(14)	not null	unique,
 	LivObservacoes		varchar(500)	null,
 	EdiID				int			not null,
 	foreign key(EdiID) references tblEditoras(EdiID)
@@ -36,10 +36,10 @@ create table tblAutoresLivros(
 
 create table tblUsuarios(
 	UserID			int				not null	primary key,
-	UserCPF			decimal(11,0)	not null,
+	UserCPF			decimal(11,0)	not null	unique,
 	UserNome		varchar(70)		not null,
 	UserSenha		varchar(20)		not null,
-	UserEmail		varchar(80)		not null,
-	UserTelefone	decimal(11,0)	not null,
+	UserEmail		varchar(80)		not null	unique,
+	UserTelefone	decimal(11,0)	not null	unique,
 	UserObs			varchar(100)		null
 );

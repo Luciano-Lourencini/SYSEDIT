@@ -28,5 +28,11 @@ namespace wfaSysEdit
             frmUsuariosEditar usuariosEditar = new frmUsuariosEditar();
             usuariosEditar.ShowDialog();
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            frmUsuariosExcluir usuariosExcluir = new frmUsuariosExcluir();
+            usuariosExcluir.ShowDialog();
+        }
     }
 }
