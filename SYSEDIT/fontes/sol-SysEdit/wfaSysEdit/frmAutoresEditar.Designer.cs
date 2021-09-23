@@ -39,12 +39,14 @@ namespace wfaSysEdit
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtAutID = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.gpEditar.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(164, 177);
+            this.btnEditar.Enabled = false;
+            this.btnEditar.Location = new System.Drawing.Point(164, 241);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 37);
             this.btnEditar.TabIndex = 43;
@@ -55,7 +57,7 @@ namespace wfaSysEdit
             // lblAutID
             // 
             this.lblAutID.AutoSize = true;
-            this.lblAutID.Location = new System.Drawing.Point(162, 12);
+            this.lblAutID.Location = new System.Drawing.Point(19, 17);
             this.lblAutID.Name = "lblAutID";
             this.lblAutID.Size = new System.Drawing.Size(83, 13);
             this.lblAutID.TabIndex = 42;
@@ -65,20 +67,22 @@ namespace wfaSysEdit
             // 
             this.gpEditar.Controls.Add(this.lblObs);
             this.gpEditar.Controls.Add(this.txtObs);
+            this.gpEditar.Controls.Add(this.lblAutID);
             this.gpEditar.Controls.Add(this.lblPseud);
             this.gpEditar.Controls.Add(this.txtPseud);
+            this.gpEditar.Controls.Add(this.txtAutID);
             this.gpEditar.Controls.Add(this.lblNome);
             this.gpEditar.Controls.Add(this.txtNome);
             this.gpEditar.Location = new System.Drawing.Point(12, 54);
             this.gpEditar.Name = "gpEditar";
-            this.gpEditar.Size = new System.Drawing.Size(397, 117);
+            this.gpEditar.Size = new System.Drawing.Size(397, 164);
             this.gpEditar.TabIndex = 40;
             this.gpEditar.TabStop = false;
             // 
             // lblObs
             // 
             this.lblObs.AutoSize = true;
-            this.lblObs.Location = new System.Drawing.Point(13, 62);
+            this.lblObs.Location = new System.Drawing.Point(16, 102);
             this.lblObs.Name = "lblObs";
             this.lblObs.Size = new System.Drawing.Size(70, 13);
             this.lblObs.TabIndex = 36;
@@ -86,7 +90,8 @@ namespace wfaSysEdit
             // 
             // txtObs
             // 
-            this.txtObs.Location = new System.Drawing.Point(16, 78);
+            this.txtObs.Enabled = false;
+            this.txtObs.Location = new System.Drawing.Point(19, 118);
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(363, 20);
             this.txtObs.TabIndex = 35;
@@ -94,7 +99,7 @@ namespace wfaSysEdit
             // lblPseud
             // 
             this.lblPseud.AutoSize = true;
-            this.lblPseud.Location = new System.Drawing.Point(222, 16);
+            this.lblPseud.Location = new System.Drawing.Point(225, 56);
             this.lblPseud.Name = "lblPseud";
             this.lblPseud.Size = new System.Drawing.Size(65, 13);
             this.lblPseud.TabIndex = 34;
@@ -102,7 +107,8 @@ namespace wfaSysEdit
             // 
             // txtPseud
             // 
-            this.txtPseud.Location = new System.Drawing.Point(221, 32);
+            this.txtPseud.Enabled = false;
+            this.txtPseud.Location = new System.Drawing.Point(224, 72);
             this.txtPseud.Name = "txtPseud";
             this.txtPseud.Size = new System.Drawing.Size(158, 20);
             this.txtPseud.TabIndex = 33;
@@ -110,7 +116,7 @@ namespace wfaSysEdit
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(16, 16);
+            this.lblNome.Location = new System.Drawing.Point(19, 56);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(35, 13);
             this.lblNome.TabIndex = 32;
@@ -118,27 +124,38 @@ namespace wfaSysEdit
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(16, 32);
+            this.txtNome.Enabled = false;
+            this.txtNome.Location = new System.Drawing.Point(19, 72);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(199, 20);
             this.txtNome.TabIndex = 31;
             // 
             // txtAutID
             // 
-            this.txtAutID.Location = new System.Drawing.Point(153, 28);
+            this.txtAutID.Enabled = false;
+            this.txtAutID.Location = new System.Drawing.Point(19, 33);
             this.txtAutID.Name = "txtAutID";
             this.txtAutID.Size = new System.Drawing.Size(111, 20);
             this.txtAutID.TabIndex = 41;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(173, 12);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(80, 36);
+            this.btnPesquisar.TabIndex = 44;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // frmAutoresEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 233);
+            this.ClientSize = new System.Drawing.Size(429, 310);
+            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.lblAutID);
             this.Controls.Add(this.gpEditar);
-            this.Controls.Add(this.txtAutID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -147,7 +164,6 @@ namespace wfaSysEdit
             this.gpEditar.ResumeLayout(false);
             this.gpEditar.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -163,5 +179,6 @@ namespace wfaSysEdit
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtAutID;
+        private System.Windows.Forms.Button btnPesquisar;
     }
 }

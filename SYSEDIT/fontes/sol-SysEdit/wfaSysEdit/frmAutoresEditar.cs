@@ -76,5 +76,24 @@ namespace wfaSysEdit
                 
             }
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            frmAutoresPesquisar autoresPesquisar = new frmAutoresPesquisar();
+            autoresPesquisar.ShowDialog();
+
+            txtAutID.Enabled = true;
+            txtNome.Enabled = true;
+            txtPseud.Enabled = true;
+            txtObs.Enabled = true;
+
+            if(autoresPesquisar.parAutores.Codigo >= 0)  //pq setei como -1 para se não selecionar nada (se ñ selecionar nada = -1)
+            {
+                txtAutID.Text = autoresPesquisar.parAutores.Codigo.ToString();
+                txtNome.Text = autoresPesquisar.parAutores.Nome.ToString();
+                txtPseud.Text = autoresPesquisar.parAutores.Pseudonimo.ToString();
+                txtObs.Text = autoresPesquisar.parAutores.Observacoes.ToString();
+            }
+        }
     }
 }

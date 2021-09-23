@@ -30,7 +30,6 @@ namespace wfaSysEdit
         private void InitializeComponent()
         {
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -39,25 +38,15 @@ namespace wfaSysEdit
             // 
             this.btnEditar.Location = new System.Drawing.Point(94, 21);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.Size = new System.Drawing.Size(130, 23);
             this.btnEditar.TabIndex = 8;
-            this.btnEditar.Text = "&Editar";
+            this.btnEditar.Text = "&Pesquisar/Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Location = new System.Drawing.Point(256, 21);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
-            this.btnPesquisar.TabIndex = 7;
-            this.btnPesquisar.Text = "&Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(175, 21);
+            this.btnExcluir.Location = new System.Drawing.Point(230, 21);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 6;
@@ -79,9 +68,8 @@ namespace wfaSysEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 61);
+            this.ClientSize = new System.Drawing.Size(320, 61);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnNovo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -96,7 +84,6 @@ namespace wfaSysEdit
         #endregion
 
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnNovo;
     }

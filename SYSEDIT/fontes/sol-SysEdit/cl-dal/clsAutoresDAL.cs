@@ -108,7 +108,5 @@ namespace cl_dal
 
             return _tabela;
         }
-
-
     }
 }

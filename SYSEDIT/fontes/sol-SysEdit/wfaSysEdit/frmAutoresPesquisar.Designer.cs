@@ -88,6 +88,7 @@ namespace wfaSysEdit
             this.MinimizeBox = false;
             this.Name = "frmAutoresPesquisar";
             this.Text = "Pesquisar Autores";
+            this.Load += new System.EventHandler(this.frmAutoresPesquisar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgEstados)).EndInit();
             this.ResumeLayout(false);
 
