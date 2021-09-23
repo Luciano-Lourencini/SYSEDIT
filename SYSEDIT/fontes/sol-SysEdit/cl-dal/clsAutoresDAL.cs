@@ -16,6 +16,8 @@ namespace cl_dal
     {
         private SqlConnection _conexao;
         private SqlCommand _comando;
+        private DataTable _tabela;
+        private SqlDataAdapter _adaptador;  //converte os dados do comando SQL para DataTable
 
         private int getProxID()
         {
@@ -85,5 +87,28 @@ namespace cl_dal
 
             clsConexao.FecharConexao();
         }
+
+        public DataTable ListarTodos()  //esse método não tem nada de OO
+        {
+            _conexao = clsConexao.ObterConexao();
+
+            _comando = new SqlCommand();
+            _comando.Connection = _conexao;
+
+            _comando.CommandText = "SELECT * FROM tblAutores";
+
+            //instancia os objetos
+            _tabela = new DataTable();
+            _adaptador = new SqlDataAdapter(_comando);  //passa o comando SQL aqui dentro (como parâmetro)
+
+            //preencho a tabela com os dados do comando SQL (que foram convertidos pelo adaptador)
+            _adaptador.Fill(_tabela);
+
+            clsConexao.FecharConexao();
+
+            return _tabela;
+        }
+
+
     }
 }

@@ -34,5 +34,11 @@ namespace wfaSysEdit
             frmAutoresExcluir parAutores = new frmAutoresExcluir();
             parAutores.ShowDialog();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            frmAutoresPesquisar parAutores = new frmAutoresPesquisar();
+            parAutores.ShowDialog();
+        }
     }
 }

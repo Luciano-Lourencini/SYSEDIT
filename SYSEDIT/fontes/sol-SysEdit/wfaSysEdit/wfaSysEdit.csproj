@@ -73,6 +73,12 @@
     <Compile Include="frmAutoresNovo.Designer.cs">
       <DependentUpon>frmAutoresNovo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAutoresPesquisar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAutoresPesquisar.Designer.cs">
+      <DependentUpon>frmAutoresPesquisar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditoras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAutoresNovo.resx">
       <DependentUpon>frmAutoresNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAutoresPesquisar.resx">
+      <DependentUpon>frmAutoresPesquisar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditoras.resx">
       <DependentUpon>frmEditoras.cs</DependentUpon>

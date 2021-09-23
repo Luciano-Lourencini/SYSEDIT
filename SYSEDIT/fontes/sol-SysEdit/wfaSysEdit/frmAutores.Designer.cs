@@ -53,6 +53,7 @@ namespace wfaSysEdit
             this.btnPesquisar.TabIndex = 7;
             this.btnPesquisar.Text = "&Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnExcluir
             // 
