@@ -61,12 +61,6 @@
     <Compile Include="frmAutoresEditar.Designer.cs">
       <DependentUpon>frmAutoresEditar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAutoresExcluir.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAutoresExcluir.Designer.cs">
-      <DependentUpon>frmAutoresExcluir.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAutoresNovo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,9 +158,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAutoresEditar.resx">
       <DependentUpon>frmAutoresEditar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAutoresExcluir.resx">
-      <DependentUpon>frmAutoresExcluir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAutoresNovo.resx">
       <DependentUpon>frmAutoresNovo.cs</DependentUpon>

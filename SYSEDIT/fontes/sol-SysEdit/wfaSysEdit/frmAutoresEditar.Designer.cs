@@ -32,23 +32,26 @@ namespace wfaSysEdit
             this.btnEditar = new System.Windows.Forms.Button();
             this.lblAutID = new System.Windows.Forms.Label();
             this.gpEditar = new System.Windows.Forms.GroupBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.lblObs = new System.Windows.Forms.Label();
             this.txtObs = new System.Windows.Forms.TextBox();
             this.lblPseud = new System.Windows.Forms.Label();
             this.txtPseud = new System.Windows.Forms.TextBox();
+            this.txtAutID = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtAutID = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnApagarAutor = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.gpEditar.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEditar
             // 
             this.btnEditar.Enabled = false;
-            this.btnEditar.Location = new System.Drawing.Point(164, 241);
+            this.btnEditar.Location = new System.Drawing.Point(89, 239);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(100, 37);
+            this.btnEditar.Size = new System.Drawing.Size(111, 40);
             this.btnEditar.TabIndex = 43;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -65,6 +68,7 @@ namespace wfaSysEdit
             // 
             // gpEditar
             // 
+            this.gpEditar.Controls.Add(this.btnLimpar);
             this.gpEditar.Controls.Add(this.lblObs);
             this.gpEditar.Controls.Add(this.txtObs);
             this.gpEditar.Controls.Add(this.lblAutID);
@@ -78,6 +82,17 @@ namespace wfaSysEdit
             this.gpEditar.Size = new System.Drawing.Size(397, 164);
             this.gpEditar.TabIndex = 40;
             this.gpEditar.TabStop = false;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Enabled = false;
+            this.btnLimpar.Location = new System.Drawing.Point(313, 17);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(69, 23);
+            this.btnLimpar.TabIndex = 47;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // lblObs
             // 
@@ -113,6 +128,14 @@ namespace wfaSysEdit
             this.txtPseud.Size = new System.Drawing.Size(158, 20);
             this.txtPseud.TabIndex = 33;
             // 
+            // txtAutID
+            // 
+            this.txtAutID.Enabled = false;
+            this.txtAutID.Location = new System.Drawing.Point(19, 33);
+            this.txtAutID.Name = "txtAutID";
+            this.txtAutID.Size = new System.Drawing.Size(111, 20);
+            this.txtAutID.TabIndex = 41;
+            // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
@@ -130,14 +153,6 @@ namespace wfaSysEdit
             this.txtNome.Size = new System.Drawing.Size(199, 20);
             this.txtNome.TabIndex = 31;
             // 
-            // txtAutID
-            // 
-            this.txtAutID.Enabled = false;
-            this.txtAutID.Location = new System.Drawing.Point(19, 33);
-            this.txtAutID.Name = "txtAutID";
-            this.txtAutID.Size = new System.Drawing.Size(111, 20);
-            this.txtAutID.TabIndex = 41;
-            // 
             // btnPesquisar
             // 
             this.btnPesquisar.Location = new System.Drawing.Point(173, 12);
@@ -148,11 +163,34 @@ namespace wfaSysEdit
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
+            // btnApagarAutor
+            // 
+            this.btnApagarAutor.Enabled = false;
+            this.btnApagarAutor.Location = new System.Drawing.Point(219, 239);
+            this.btnApagarAutor.Name = "btnApagarAutor";
+            this.btnApagarAutor.Size = new System.Drawing.Size(111, 40);
+            this.btnApagarAutor.TabIndex = 46;
+            this.btnApagarAutor.Text = "Apagar";
+            this.btnApagarAutor.UseVisualStyleBackColor = true;
+            this.btnApagarAutor.Click += new System.EventHandler(this.btnApagarAutor_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(356, 275);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(61, 23);
+            this.btnSair.TabIndex = 47;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // frmAutoresEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(429, 310);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnApagarAutor);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.gpEditar);
@@ -180,5 +218,8 @@ namespace wfaSysEdit
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtAutID;
         private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Button btnApagarAutor;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnSair;
     }
 }

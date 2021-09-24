@@ -78,7 +78,6 @@ C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\bi
 C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.csproj.AssemblyReference.cache
 C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.frmAutores.resources
 C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.frmAutoresEditar.resources
-C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.frmAutoresExcluir.resources
 C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.frmAutoresNovo.resources
 C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.frmEditoras.resources
 C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.frmEditorasEditar.resources
@@ -99,3 +98,4 @@ C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\ob
 C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.exe
 C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.pdb
 C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.frmUsuariosExcluir.resources
+C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.frmAutoresPesquisar.resources

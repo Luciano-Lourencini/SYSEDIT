@@ -17,12 +17,12 @@ namespace wfaSysEdit
     {
         public clsAutores parAutores = new clsAutores();  //vai receber os dados da pesquisa
 
-        private void carregarGridAutores()  //método que carrega os dados
+        private void carregarGrid()  //método que carrega os dados
         {
             clsAutoresDAL parAutores = new clsAutoresDAL();  //inicializa a variável
 
-            dgEstados.AutoGenerateColumns = true;  //para gerar as colunas de forma automática
-            dgEstados.DataSource = parAutores.ListarTodos();
+            dgAutores.AutoGenerateColumns = true;  //para gerar as colunas de forma automática
+            dgAutores.DataSource = parAutores.ListarTodos();     //dg = data grid
         }
 
         public frmAutoresPesquisar()
@@ -37,28 +37,52 @@ namespace wfaSysEdit
 
         private void btnSelecionar_Click(object sender, EventArgs e)
         {
-            int vI = 0;  //valor índice da linha (código da linha)
-            vI = dgEstados.CurrentRow.Index;   //O índice da linha recebe o código da linha selecionada
-                           //linha atual
+            try
+            {
+                int vI = 0;  //valor índice da linha (código da linha)
+                vI = dgAutores.CurrentRow.Index;   //O índice da linha recebe o código da linha selecionada
+                              //linha atual
 
-                                           //coluna 0  //linha atual (selecionada)
-            parAutores.Codigo = int.Parse(dgEstados[0, vI].Value.ToString());
-            parAutores.Nome = dgEstados[1, vI].Value.ToString();
-            parAutores.Pseudonimo = dgEstados[2, vI].Value.ToString();
-            parAutores.Observacoes = dgEstados[3, vI].Value.ToString();
+                                               //coluna 0  //linha atual (selecionada)
+                parAutores.Codigo = int.Parse(dgAutores[0, vI].Value.ToString());
+                parAutores.Nome = dgAutores[1, vI].Value.ToString();
+                parAutores.Pseudonimo = dgAutores[2, vI].Value.ToString();
+                parAutores.Observacoes = dgAutores[3, vI].Value.ToString();
 
-            this.Close();  //vai fechar para abrir a tela de editar com os valores
+                this.Close();  //vai fechar para abrir a tela de editar com os valores
+            }
+            catch(Exception ex)
+            {
+                clsMensagens.Mensagem(ex.Message, clsMensagens.tipoMensagem.erro);
+            }
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            carregarGridAutores();
+            carregarGrid();
+            formatarGrid();
         }
 
         private void frmAutoresPesquisar_Load(object sender, EventArgs e)
         {
             parAutores.Codigo = -1;  //serve pra validar se vai selecionar algo ou não
-            carregarGridAutores();  //para abrir automaticamente quando abrir a tela
+            carregarGrid();  //para abrir automaticamente quando abrir a tela
+            formatarGrid();
+        }
+
+        private void formatarGrid()
+        {
+            dgAutores.ReadOnly = true;
+            dgAutores.MultiSelect = false; //selecionar vários
+
+            dgAutores.ScrollBars = ScrollBars.Vertical;  //só vai ter scroll vertical
+
+            dgAutores.Columns[0].HeaderText = "Código";
+            dgAutores.Columns[1].HeaderText = "Nome";
+            dgAutores.Columns[2].HeaderText = "Pseudônimo";
+            dgAutores.Columns[3].HeaderText = "Observações";
+
+            dgAutores.Columns[0].Width = 50;
         }
     }
 }

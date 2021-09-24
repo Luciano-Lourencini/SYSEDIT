@@ -30,33 +30,22 @@ namespace wfaSysEdit
         private void InitializeComponent()
         {
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(94, 21);
+            this.btnEditar.Location = new System.Drawing.Point(148, 21);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(130, 23);
             this.btnEditar.TabIndex = 8;
-            this.btnEditar.Text = "&Pesquisar/Editar";
+            this.btnEditar.Text = "&Pesquisar/Editar/Excluir";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Location = new System.Drawing.Point(230, 21);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluir.TabIndex = 6;
-            this.btnExcluir.Text = "&Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(13, 21);
+            this.btnNovo.Location = new System.Drawing.Point(42, 21);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(75, 23);
             this.btnNovo.TabIndex = 5;
@@ -70,7 +59,6 @@ namespace wfaSysEdit
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(320, 61);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnNovo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -84,7 +72,6 @@ namespace wfaSysEdit
         #endregion
 
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnNovo;
     }
 }

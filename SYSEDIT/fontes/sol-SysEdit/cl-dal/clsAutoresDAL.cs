@@ -95,7 +95,7 @@ namespace cl_dal
             _comando = new SqlCommand();
             _comando.Connection = _conexao;
 
-            _comando.CommandText = "SELECT * FROM tblAutores";
+            _comando.CommandText = "SELECT AutID, AutNome, AutPseudonimo, AutObservacoes FROM tblAutores";  //colocar o '*' ferra com a performance
 
             //instancia os objetos
             _tabela = new DataTable();

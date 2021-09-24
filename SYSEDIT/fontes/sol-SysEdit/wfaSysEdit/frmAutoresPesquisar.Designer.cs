@@ -29,20 +29,23 @@ namespace wfaSysEdit
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgEstados = new System.Windows.Forms.DataGridView();
+            this.dgAutores = new System.Windows.Forms.DataGridView();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnSelecionar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgEstados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgAutores)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgEstados
+            // dgAutores
             // 
-            this.dgEstados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgEstados.Location = new System.Drawing.Point(12, 12);
-            this.dgEstados.Name = "dgEstados";
-            this.dgEstados.Size = new System.Drawing.Size(438, 197);
-            this.dgEstados.TabIndex = 0;
+            this.dgAutores.AllowUserToAddRows = false;
+            this.dgAutores.AllowUserToDeleteRows = false;
+            this.dgAutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgAutores.Location = new System.Drawing.Point(12, 12);
+            this.dgAutores.Name = "dgAutores";
+            this.dgAutores.ReadOnly = true;
+            this.dgAutores.Size = new System.Drawing.Size(438, 197);
+            this.dgAutores.TabIndex = 0;
             // 
             // btnSair
             // 
@@ -82,21 +85,21 @@ namespace wfaSysEdit
             this.Controls.Add(this.btnSelecionar);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.dgEstados);
+            this.Controls.Add(this.dgAutores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAutoresPesquisar";
             this.Text = "Pesquisar Autores";
             this.Load += new System.EventHandler(this.frmAutoresPesquisar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgEstados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgAutores)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgEstados;
+        private System.Windows.Forms.DataGridView dgAutores;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnSelecionar;

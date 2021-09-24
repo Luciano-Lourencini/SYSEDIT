@@ -83,9 +83,13 @@ namespace wfaSysEdit
             autoresPesquisar.ShowDialog();
 
             txtAutID.Enabled = true;
+            txtAutID.ReadOnly = true;
             txtNome.Enabled = true;
             txtPseud.Enabled = true;
             txtObs.Enabled = true;
+            btnEditar.Enabled = true;
+            btnLimpar.Enabled = true;
+            btnApagarAutor.Enabled = true;
 
             if(autoresPesquisar.parAutores.Codigo >= 0)  //pq setei como -1 para se não selecionar nada (se ñ selecionar nada = -1)
             {
@@ -94,6 +98,54 @@ namespace wfaSysEdit
                 txtPseud.Text = autoresPesquisar.parAutores.Pseudonimo.ToString();
                 txtObs.Text = autoresPesquisar.parAutores.Observacoes.ToString();
             }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnApagarAutor_Click(object sender, EventArgs e)
+        {
+            if (txtAutID.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Insira o código do Autor!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if ((MessageBox.Show("Você REALMENTE deseja apagar esse Autor?", "Confirmação", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)) == DialogResult.OK)
+                {
+                    try
+                    {
+                        clsAutores parAutores = new clsAutores();
+                        parAutores.Codigo = int.Parse(txtAutID.Text);
+
+                        clsAutoresDAL autoresDAL = new clsAutoresDAL();
+                        autoresDAL.Apagar(parAutores);
+                        MessageBox.Show("Autor Apagado!");
+
+                        clsLimpar.Limpar(txtAutID);
+                        clsLimpar.Limpar(txtNome);
+                        clsLimpar.Limpar(txtObs);
+                        clsLimpar.Limpar(txtPseud);
+
+                        txtAutID.Focus();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        txtAutID.Focus();
+                    }
+                }
+            }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            clsLimpar.Limpar(txtAutID);
+            clsLimpar.Limpar(txtNome);
+            clsLimpar.Limpar(txtObs);
+            clsLimpar.Limpar(txtPseud);
         }
     }
 }

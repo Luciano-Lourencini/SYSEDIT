@@ -28,11 +28,5 @@ namespace wfaSysEdit
             frmAutoresEditar autoresEditar = new frmAutoresEditar();
             autoresEditar.ShowDialog();
         }
-
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            frmAutoresExcluir parAutores = new frmAutoresExcluir();
-            parAutores.ShowDialog();
-        }
     }
 }
