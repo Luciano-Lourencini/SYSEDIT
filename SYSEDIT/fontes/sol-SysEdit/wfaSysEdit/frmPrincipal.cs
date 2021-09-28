@@ -17,28 +17,52 @@ namespace wfaSysEdit
             InitializeComponent();
         }
 
-        private void editorasToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void novoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmEditoras editoras = new frmEditoras();
-            editoras.ShowDialog();
+            frmEditorasNovo editorasNovo = new frmEditorasNovo();
+            editorasNovo.ShowDialog();
         }
 
-        private void livrosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void buscarEditarApagarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmLivros livros = new frmLivros();
-            livros.ShowDialog();
+            frmEditorasEditar editorasEditar = new frmEditorasEditar();
+            editorasEditar.ShowDialog();
         }
 
-        private void autoresToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsCadastrar_Click(object sender, EventArgs e)
         {
-            frmAutores autores = new frmAutores();
-            autores.ShowDialog();
+            frmAutoresNovo autoresNovo = new frmAutoresNovo();
+            autoresNovo.ShowDialog();
         }
 
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsBuscarEditarApagar_Click(object sender, EventArgs e)
         {
-            frmUsuarios usuarios = new frmUsuarios();
-            usuarios.ShowDialog();
+            frmAutoresEditar autoresEditar = new frmAutoresEditar();
+            autoresEditar.ShowDialog();
+        }
+
+        private void novoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmUsuariosNovo usuariosNovo = new frmUsuariosNovo();
+            usuariosNovo.ShowDialog();
+        }
+
+        private void buscarEditarApagarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmUsuariosEditar usuariosEditar = new frmUsuariosEditar();
+            usuariosEditar.ShowDialog();
+        }
+
+        private void novoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLivrosNovo livrosNovo = new frmLivrosNovo();
+            livrosNovo.ShowDialog();
+        }
+
+        private void buscarEditarApagarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmLivrosEditar livrosEditar = new frmLivrosEditar();
+            livrosEditar.ShowDialog();
         }
     }
 }

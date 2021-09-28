@@ -53,11 +53,24 @@ namespace wfaSysEdit
                             txtNome.Text = String.Empty;
                             txtObs.Text = "";
                             txtPseud.Clear();
-                            txtAutID.Focus();
+
+                            txtAutID.Enabled = false;
+                            txtNome.Enabled = false;
+                            txtPseud.Enabled = false;
+                            txtObs.Enabled = false;
+                            btnEditar.Enabled = false;
+                            btnLimpar.Enabled = false;
+                            btnApagarAutor.Enabled = false;
+
+                            btnPesquisar.Focus();
+
+
                         }
                         catch(Exception ex)
                         {
                             MessageBox.Show(ex.Message);
+
+                            btnEditar.Focus();
                         }
                     }
                     else
@@ -82,27 +95,22 @@ namespace wfaSysEdit
             frmAutoresPesquisar autoresPesquisar = new frmAutoresPesquisar();
             autoresPesquisar.ShowDialog();
 
-            txtAutID.Enabled = true;
-            txtAutID.ReadOnly = true;
-            txtNome.Enabled = true;
-            txtPseud.Enabled = true;
-            txtObs.Enabled = true;
-            btnEditar.Enabled = true;
-            btnLimpar.Enabled = true;
-            btnApagarAutor.Enabled = true;
-
             if(autoresPesquisar.parAutores.Codigo >= 0)  //pq setei como -1 para se não selecionar nada (se ñ selecionar nada = -1)
             {
                 txtAutID.Text = autoresPesquisar.parAutores.Codigo.ToString();
                 txtNome.Text = autoresPesquisar.parAutores.Nome.ToString();
                 txtPseud.Text = autoresPesquisar.parAutores.Pseudonimo.ToString();
                 txtObs.Text = autoresPesquisar.parAutores.Observacoes.ToString();
-            }
-        }
 
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
+                txtAutID.Enabled = true;
+                txtAutID.ReadOnly = true;
+                txtNome.Enabled = true;
+                txtPseud.Enabled = true;
+                txtObs.Enabled = true;
+                btnEditar.Enabled = true;
+                btnLimpar.Enabled = true;
+                btnApagarAutor.Enabled = true;
+            }
         }
 
         private void btnApagarAutor_Click(object sender, EventArgs e)
@@ -129,12 +137,20 @@ namespace wfaSysEdit
                         clsLimpar.Limpar(txtObs);
                         clsLimpar.Limpar(txtPseud);
 
-                        txtAutID.Focus();
+                        txtAutID.Enabled = false;
+                        txtNome.Enabled = false;
+                        txtPseud.Enabled = false;
+                        txtObs.Enabled = false;
+                        btnEditar.Enabled = false;
+                        btnLimpar.Enabled = false;
+                        btnApagarAutor.Enabled = false;
+
+                        btnPesquisar.Focus();
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
-                        txtAutID.Focus();
+                        btnApagarAutor.Focus();
                     }
                 }
             }
@@ -146,6 +162,16 @@ namespace wfaSysEdit
             clsLimpar.Limpar(txtNome);
             clsLimpar.Limpar(txtObs);
             clsLimpar.Limpar(txtPseud);
+
+            txtAutID.Enabled = false;
+            txtNome.Enabled = false;
+            txtPseud.Enabled = false;
+            txtObs.Enabled = false;
+            btnEditar.Enabled = false;
+            btnLimpar.Enabled = false;
+            btnApagarAutor.Enabled = false;
+
+            btnPesquisar.Focus();
         }
     }
 }

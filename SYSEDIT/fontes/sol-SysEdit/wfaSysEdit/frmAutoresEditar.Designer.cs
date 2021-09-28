@@ -42,7 +42,6 @@ namespace wfaSysEdit
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnApagarAutor = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
             this.gpEditar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,22 +173,11 @@ namespace wfaSysEdit
             this.btnApagarAutor.UseVisualStyleBackColor = true;
             this.btnApagarAutor.Click += new System.EventHandler(this.btnApagarAutor_Click);
             // 
-            // btnSair
-            // 
-            this.btnSair.Location = new System.Drawing.Point(356, 275);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(61, 23);
-            this.btnSair.TabIndex = 47;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
             // frmAutoresEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 310);
-            this.Controls.Add(this.btnSair);
+            this.ClientSize = new System.Drawing.Size(429, 294);
             this.Controls.Add(this.btnApagarAutor);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnEditar);
@@ -220,6 +208,5 @@ namespace wfaSysEdit
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnApagarAutor;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button btnSair;
     }
 }

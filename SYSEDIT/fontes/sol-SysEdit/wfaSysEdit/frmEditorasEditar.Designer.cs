@@ -39,13 +39,16 @@ namespace wfaSysEdit
             this.lblEdiID = new System.Windows.Forms.Label();
             this.txtEdiID = new System.Windows.Forms.TextBox();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnApagar = new System.Windows.Forms.Button();
             this.gpEditar.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblObs
             // 
             this.lblObs.AutoSize = true;
-            this.lblObs.Location = new System.Drawing.Point(13, 62);
+            this.lblObs.Location = new System.Drawing.Point(12, 107);
             this.lblObs.Name = "lblObs";
             this.lblObs.Size = new System.Drawing.Size(70, 13);
             this.lblObs.TabIndex = 36;
@@ -53,7 +56,8 @@ namespace wfaSysEdit
             // 
             // txtObs
             // 
-            this.txtObs.Location = new System.Drawing.Point(16, 78);
+            this.txtObs.Enabled = false;
+            this.txtObs.Location = new System.Drawing.Point(15, 123);
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(363, 20);
             this.txtObs.TabIndex = 35;
@@ -61,7 +65,7 @@ namespace wfaSysEdit
             // lblSigla
             // 
             this.lblSigla.AutoSize = true;
-            this.lblSigla.Location = new System.Drawing.Point(276, 16);
+            this.lblSigla.Location = new System.Drawing.Point(275, 61);
             this.lblSigla.Name = "lblSigla";
             this.lblSigla.Size = new System.Drawing.Size(30, 13);
             this.lblSigla.TabIndex = 34;
@@ -69,7 +73,8 @@ namespace wfaSysEdit
             // 
             // txtSigla
             // 
-            this.txtSigla.Location = new System.Drawing.Point(279, 32);
+            this.txtSigla.Enabled = false;
+            this.txtSigla.Location = new System.Drawing.Point(278, 77);
             this.txtSigla.Name = "txtSigla";
             this.txtSigla.Size = new System.Drawing.Size(100, 20);
             this.txtSigla.TabIndex = 33;
@@ -77,7 +82,7 @@ namespace wfaSysEdit
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(16, 16);
+            this.lblNome.Location = new System.Drawing.Point(15, 61);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(35, 13);
             this.lblNome.TabIndex = 32;
@@ -85,29 +90,33 @@ namespace wfaSysEdit
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(16, 32);
+            this.txtNome.Enabled = false;
+            this.txtNome.Location = new System.Drawing.Point(15, 77);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(257, 20);
             this.txtNome.TabIndex = 31;
             // 
             // gpEditar
             // 
+            this.gpEditar.Controls.Add(this.btnLimpar);
             this.gpEditar.Controls.Add(this.lblObs);
+            this.gpEditar.Controls.Add(this.lblEdiID);
             this.gpEditar.Controls.Add(this.txtObs);
             this.gpEditar.Controls.Add(this.lblSigla);
+            this.gpEditar.Controls.Add(this.txtEdiID);
             this.gpEditar.Controls.Add(this.txtSigla);
             this.gpEditar.Controls.Add(this.lblNome);
             this.gpEditar.Controls.Add(this.txtNome);
-            this.gpEditar.Location = new System.Drawing.Point(12, 49);
+            this.gpEditar.Location = new System.Drawing.Point(12, 54);
             this.gpEditar.Name = "gpEditar";
-            this.gpEditar.Size = new System.Drawing.Size(397, 117);
+            this.gpEditar.Size = new System.Drawing.Size(397, 164);
             this.gpEditar.TabIndex = 37;
             this.gpEditar.TabStop = false;
             // 
             // lblEdiID
             // 
             this.lblEdiID.AutoSize = true;
-            this.lblEdiID.Location = new System.Drawing.Point(162, 7);
+            this.lblEdiID.Location = new System.Drawing.Point(15, 22);
             this.lblEdiID.Name = "lblEdiID";
             this.lblEdiID.Size = new System.Drawing.Size(91, 13);
             this.lblEdiID.TabIndex = 38;
@@ -115,30 +124,64 @@ namespace wfaSysEdit
             // 
             // txtEdiID
             // 
-            this.txtEdiID.Location = new System.Drawing.Point(153, 23);
+            this.txtEdiID.Enabled = false;
+            this.txtEdiID.Location = new System.Drawing.Point(15, 38);
             this.txtEdiID.Name = "txtEdiID";
             this.txtEdiID.Size = new System.Drawing.Size(111, 20);
             this.txtEdiID.TabIndex = 37;
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(164, 172);
+            this.btnEditar.Enabled = false;
+            this.btnEditar.Location = new System.Drawing.Point(91, 232);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(100, 37);
+            this.btnEditar.Size = new System.Drawing.Size(111, 39);
             this.btnEditar.TabIndex = 39;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(165, 12);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(92, 35);
+            this.btnPesquisar.TabIndex = 45;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Enabled = false;
+            this.btnLimpar.Location = new System.Drawing.Point(309, 17);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(69, 23);
+            this.btnLimpar.TabIndex = 48;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // btnApagar
+            // 
+            this.btnApagar.Enabled = false;
+            this.btnApagar.Location = new System.Drawing.Point(223, 231);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(111, 40);
+            this.btnApagar.TabIndex = 47;
+            this.btnApagar.Text = "Apagar";
+            this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
+            // 
             // frmEditorasEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 221);
+            this.ClientSize = new System.Drawing.Size(425, 288);
+            this.Controls.Add(this.btnApagar);
+            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.lblEdiID);
             this.Controls.Add(this.gpEditar);
-            this.Controls.Add(this.txtEdiID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -147,7 +190,6 @@ namespace wfaSysEdit
             this.gpEditar.ResumeLayout(false);
             this.gpEditar.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -162,5 +204,8 @@ namespace wfaSysEdit
         private System.Windows.Forms.Label lblEdiID;
         private System.Windows.Forms.TextBox txtEdiID;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnApagar;
     }
 }

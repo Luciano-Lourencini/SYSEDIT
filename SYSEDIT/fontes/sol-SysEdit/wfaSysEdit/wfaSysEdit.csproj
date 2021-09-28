@@ -49,12 +49,6 @@
     <Compile Include="clsIsNull.cs" />
     <Compile Include="clsLimpar.cs" />
     <Compile Include="clsMensagens.cs" />
-    <Compile Include="frmAutores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAutores.Designer.cs">
-      <DependentUpon>frmAutores.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAutoresEditar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,23 +67,11 @@
     <Compile Include="frmAutoresPesquisar.Designer.cs">
       <DependentUpon>frmAutoresPesquisar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditoras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEditoras.Designer.cs">
-      <DependentUpon>frmEditoras.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmEditorasEditar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEditorasEditar.Designer.cs">
       <DependentUpon>frmEditorasEditar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmEditorasExcluir.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEditorasExcluir.Designer.cs">
-      <DependentUpon>frmEditorasExcluir.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEditorasNovo.cs">
       <SubType>Form</SubType>
@@ -97,11 +79,11 @@
     <Compile Include="frmEditorasNovo.Designer.cs">
       <DependentUpon>frmEditorasNovo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLivros.cs">
+    <Compile Include="frmEditorasPesquisar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLivros.Designer.cs">
-      <DependentUpon>frmLivros.cs</DependentUpon>
+    <Compile Include="frmEditorasPesquisar.Designer.cs">
+      <DependentUpon>frmEditorasPesquisar.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLivrosEditar.cs">
       <SubType>Form</SubType>
@@ -127,12 +109,6 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUsuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmUsuarios.Designer.cs">
-      <DependentUpon>frmUsuarios.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmUsuariosEditar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,9 +129,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAutores.resx">
-      <DependentUpon>frmAutores.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmAutoresEditar.resx">
       <DependentUpon>frmAutoresEditar.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,20 +138,14 @@
     <EmbeddedResource Include="frmAutoresPesquisar.resx">
       <DependentUpon>frmAutoresPesquisar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditoras.resx">
-      <DependentUpon>frmEditoras.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmEditorasEditar.resx">
       <DependentUpon>frmEditorasEditar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmEditorasExcluir.resx">
-      <DependentUpon>frmEditorasExcluir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditorasNovo.resx">
       <DependentUpon>frmEditorasNovo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLivros.resx">
-      <DependentUpon>frmLivros.cs</DependentUpon>
+    <EmbeddedResource Include="frmEditorasPesquisar.resx">
+      <DependentUpon>frmEditorasPesquisar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLivrosEditar.resx">
       <DependentUpon>frmLivrosEditar.cs</DependentUpon>
@@ -191,9 +158,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmUsuarios.resx">
-      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsuariosEditar.resx">
       <DependentUpon>frmUsuariosEditar.cs</DependentUpon>
