@@ -1,7 +1,7 @@
 ﻿
 namespace wfaSysEdit
 {
-    partial class frmLivrosPesquisar
+    partial class frmUsuariosPesquisar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,27 +29,27 @@ namespace wfaSysEdit
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgLivros = new System.Windows.Forms.DataGridView();
+            this.dgUsuarios = new System.Windows.Forms.DataGridView();
             this.btnSelecionar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgLivros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgLivros
+            // dgUsuarios
             // 
-            this.dgLivros.AllowUserToAddRows = false;
-            this.dgLivros.AllowUserToDeleteRows = false;
-            this.dgLivros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgLivros.Location = new System.Drawing.Point(12, 12);
-            this.dgLivros.Name = "dgLivros";
-            this.dgLivros.ReadOnly = true;
-            this.dgLivros.Size = new System.Drawing.Size(473, 221);
-            this.dgLivros.TabIndex = 0;
+            this.dgUsuarios.AllowUserToAddRows = false;
+            this.dgUsuarios.AllowUserToDeleteRows = false;
+            this.dgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgUsuarios.Location = new System.Drawing.Point(12, 12);
+            this.dgUsuarios.Name = "dgUsuarios";
+            this.dgUsuarios.ReadOnly = true;
+            this.dgUsuarios.Size = new System.Drawing.Size(477, 243);
+            this.dgUsuarios.TabIndex = 0;
             // 
             // btnSelecionar
             // 
-            this.btnSelecionar.Location = new System.Drawing.Point(203, 243);
+            this.btnSelecionar.Location = new System.Drawing.Point(214, 271);
             this.btnSelecionar.Name = "btnSelecionar";
             this.btnSelecionar.Size = new System.Drawing.Size(75, 23);
             this.btnSelecionar.TabIndex = 2;
@@ -59,7 +59,7 @@ namespace wfaSysEdit
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(34, 243);
+            this.btnAtualizar.Location = new System.Drawing.Point(31, 271);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
             this.btnAtualizar.TabIndex = 1;
@@ -69,7 +69,7 @@ namespace wfaSysEdit
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(370, 243);
+            this.btnSair.Location = new System.Drawing.Point(394, 271);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 3;
@@ -77,28 +77,28 @@ namespace wfaSysEdit
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // frmLivrosPesquisar
+            // frmUsuariosPesquisar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(497, 278);
+            this.ClientSize = new System.Drawing.Size(501, 307);
             this.ControlBox = false;
             this.Controls.Add(this.btnSelecionar);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.dgLivros);
+            this.Controls.Add(this.dgUsuarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmLivrosPesquisar";
-            this.Text = "Pesquisar Livros";
-            this.Load += new System.EventHandler(this.frmLivrosPesquisar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgLivros)).EndInit();
+            this.Name = "frmUsuariosPesquisar";
+            this.Text = "Pesquisar Usuários";
+            this.Load += new System.EventHandler(this.frmUsuariosPesquisar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgLivros;
+        private System.Windows.Forms.DataGridView dgUsuarios;
         private System.Windows.Forms.Button btnSelecionar;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnSair;

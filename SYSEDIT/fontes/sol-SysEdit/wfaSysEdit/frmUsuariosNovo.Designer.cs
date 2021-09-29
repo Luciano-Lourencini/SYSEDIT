@@ -58,14 +58,14 @@ namespace wfaSysEdit
             this.txtSenha.Location = new System.Drawing.Point(29, 84);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(340, 20);
-            this.txtSenha.TabIndex = 49;
+            this.txtSenha.TabIndex = 3;
             // 
             // btnSalvar
             // 
             this.btnSalvar.Location = new System.Drawing.Point(118, 253);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(150, 32);
-            this.btnSalvar.TabIndex = 48;
+            this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -84,7 +84,7 @@ namespace wfaSysEdit
             this.txtObs.Location = new System.Drawing.Point(29, 212);
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(340, 20);
-            this.txtObs.TabIndex = 46;
+            this.txtObs.TabIndex = 6;
             // 
             // lblNome
             // 
@@ -100,7 +100,7 @@ namespace wfaSysEdit
             this.txtNome.Location = new System.Drawing.Point(168, 39);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(201, 20);
-            this.txtNome.TabIndex = 42;
+            this.txtNome.TabIndex = 2;
             // 
             // lblCPF
             // 
@@ -116,7 +116,7 @@ namespace wfaSysEdit
             this.txtCPF.Location = new System.Drawing.Point(29, 39);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(133, 20);
-            this.txtCPF.TabIndex = 53;
+            this.txtCPF.TabIndex = 1;
             // 
             // lblEmail
             // 
@@ -132,7 +132,7 @@ namespace wfaSysEdit
             this.txtEmail.Location = new System.Drawing.Point(29, 129);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(340, 20);
-            this.txtEmail.TabIndex = 55;
+            this.txtEmail.TabIndex = 4;
             // 
             // lblTelefone
             // 
@@ -148,7 +148,7 @@ namespace wfaSysEdit
             this.txtTelefone.Location = new System.Drawing.Point(29, 170);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(340, 20);
-            this.txtTelefone.TabIndex = 57;
+            this.txtTelefone.TabIndex = 5;
             // 
             // frmUsuariosNovo
             // 

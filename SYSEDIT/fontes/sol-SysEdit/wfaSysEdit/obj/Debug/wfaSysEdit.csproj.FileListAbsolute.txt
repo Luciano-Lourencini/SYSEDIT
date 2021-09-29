@@ -91,7 +91,7 @@ C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\ob
 C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.csproj.CopyComplete
 C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.exe
 C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.pdb
-C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.frmUsuariosExcluir.resources
 C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.frmAutoresPesquisar.resources
 C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.frmEditorasPesquisar.resources
 C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.frmLivrosPesquisar.resources
+C:\Users\hadou\Documents\GIT\1- SYSEDIT\SYSEDIT\fontes\sol-SysEdit\wfaSysEdit\obj\Debug\wfaSysEdit.frmUsuariosPesquisar.resources

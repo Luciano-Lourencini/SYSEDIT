@@ -61,10 +61,10 @@ namespace wfaSysEdit
             // editorasToolStripMenuItem
             // 
             this.editorasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editorasToolStripMenuItem1,
             this.autoresToolStripMenuItem,
-            this.usuariosToolStripMenuItem,
-            this.livrosToolStripMenuItem});
+            this.editorasToolStripMenuItem1,
+            this.livrosToolStripMenuItem,
+            this.usuariosToolStripMenuItem});
             this.editorasToolStripMenuItem.Name = "editorasToolStripMenuItem";
             this.editorasToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.editorasToolStripMenuItem.Text = "&Cadastrar";

@@ -52,14 +52,14 @@ namespace wfaSysEdit
             this.txtPseud.Location = new System.Drawing.Point(28, 84);
             this.txtPseud.Name = "txtPseud";
             this.txtPseud.Size = new System.Drawing.Size(340, 20);
-            this.txtPseud.TabIndex = 49;
+            this.txtPseud.TabIndex = 2;
             // 
             // btnSalvar
             // 
             this.btnSalvar.Location = new System.Drawing.Point(127, 172);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(150, 32);
-            this.btnSalvar.TabIndex = 48;
+            this.btnSalvar.TabIndex = 4;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -78,7 +78,7 @@ namespace wfaSysEdit
             this.txtObs.Location = new System.Drawing.Point(28, 135);
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(340, 20);
-            this.txtObs.TabIndex = 46;
+            this.txtObs.TabIndex = 3;
             // 
             // lblNome
             // 
@@ -94,7 +94,7 @@ namespace wfaSysEdit
             this.txtNome.Location = new System.Drawing.Point(25, 34);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(343, 20);
-            this.txtNome.TabIndex = 42;
+            this.txtNome.TabIndex = 1;
             // 
             // frmAutoresNovo
             // 

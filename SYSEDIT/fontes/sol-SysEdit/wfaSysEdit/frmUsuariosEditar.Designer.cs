@@ -44,12 +44,17 @@ namespace wfaSysEdit
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.gpEditar = new System.Windows.Forms.GroupBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnApagar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.gpEditar.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTelefone
             // 
             this.lblTelefone.AutoSize = true;
-            this.lblTelefone.Location = new System.Drawing.Point(23, 197);
+            this.lblTelefone.Location = new System.Drawing.Point(9, 182);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(49, 13);
             this.lblTelefone.TabIndex = 71;
@@ -57,15 +62,15 @@ namespace wfaSysEdit
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(26, 213);
+            this.txtTelefone.Location = new System.Drawing.Point(12, 198);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(340, 20);
-            this.txtTelefone.TabIndex = 70;
+            this.txtTelefone.TabIndex = 7;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(23, 156);
+            this.lblEmail.Location = new System.Drawing.Point(9, 141);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
             this.lblEmail.TabIndex = 69;
@@ -73,15 +78,15 @@ namespace wfaSysEdit
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(26, 172);
+            this.txtEmail.Location = new System.Drawing.Point(12, 157);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(340, 20);
-            this.txtEmail.TabIndex = 68;
+            this.txtEmail.TabIndex = 6;
             // 
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
-            this.lblCPF.Location = new System.Drawing.Point(23, 66);
+            this.lblCPF.Location = new System.Drawing.Point(9, 51);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(27, 13);
             this.lblCPF.TabIndex = 67;
@@ -89,15 +94,15 @@ namespace wfaSysEdit
             // 
             // txtCPF
             // 
-            this.txtCPF.Location = new System.Drawing.Point(26, 82);
+            this.txtCPF.Location = new System.Drawing.Point(12, 67);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(133, 20);
-            this.txtCPF.TabIndex = 66;
+            this.txtCPF.TabIndex = 3;
             // 
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Location = new System.Drawing.Point(23, 111);
+            this.lblSenha.Location = new System.Drawing.Point(9, 96);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(38, 13);
             this.lblSenha.TabIndex = 65;
@@ -105,17 +110,18 @@ namespace wfaSysEdit
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(26, 127);
+            this.txtSenha.Location = new System.Drawing.Point(12, 112);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(340, 20);
-            this.txtSenha.TabIndex = 64;
+            this.txtSenha.TabIndex = 5;
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(115, 296);
+            this.btnEditar.Enabled = false;
+            this.btnEditar.Location = new System.Drawing.Point(61, 341);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(150, 32);
-            this.btnEditar.TabIndex = 63;
+            this.btnEditar.Size = new System.Drawing.Size(117, 41);
+            this.btnEditar.TabIndex = 9;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -123,7 +129,7 @@ namespace wfaSysEdit
             // lblObs
             // 
             this.lblObs.AutoSize = true;
-            this.lblObs.Location = new System.Drawing.Point(23, 239);
+            this.lblObs.Location = new System.Drawing.Point(9, 224);
             this.lblObs.Name = "lblObs";
             this.lblObs.Size = new System.Drawing.Size(70, 13);
             this.lblObs.TabIndex = 62;
@@ -131,15 +137,15 @@ namespace wfaSysEdit
             // 
             // txtObs
             // 
-            this.txtObs.Location = new System.Drawing.Point(26, 255);
+            this.txtObs.Location = new System.Drawing.Point(12, 240);
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(340, 20);
-            this.txtObs.TabIndex = 61;
+            this.txtObs.TabIndex = 8;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(162, 66);
+            this.lblNome.Location = new System.Drawing.Point(148, 51);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(35, 13);
             this.lblNome.TabIndex = 60;
@@ -147,15 +153,15 @@ namespace wfaSysEdit
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(165, 82);
+            this.txtNome.Location = new System.Drawing.Point(151, 67);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(201, 20);
-            this.txtNome.TabIndex = 59;
+            this.txtNome.TabIndex = 4;
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(112, 12);
+            this.lblId.Location = new System.Drawing.Point(148, 12);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(40, 13);
             this.lblId.TabIndex = 73;
@@ -163,38 +169,84 @@ namespace wfaSysEdit
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(115, 28);
+            this.txtId.Location = new System.Drawing.Point(106, 28);
             this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(133, 20);
-            this.txtId.TabIndex = 72;
+            this.txtId.TabIndex = 2;
+            // 
+            // gpEditar
+            // 
+            this.gpEditar.Controls.Add(this.btnLimpar);
+            this.gpEditar.Controls.Add(this.lblId);
+            this.gpEditar.Controls.Add(this.txtId);
+            this.gpEditar.Controls.Add(this.lblTelefone);
+            this.gpEditar.Controls.Add(this.txtTelefone);
+            this.gpEditar.Controls.Add(this.lblEmail);
+            this.gpEditar.Controls.Add(this.txtEmail);
+            this.gpEditar.Controls.Add(this.lblCPF);
+            this.gpEditar.Controls.Add(this.txtCPF);
+            this.gpEditar.Controls.Add(this.lblSenha);
+            this.gpEditar.Controls.Add(this.txtSenha);
+            this.gpEditar.Controls.Add(this.lblObs);
+            this.gpEditar.Controls.Add(this.txtObs);
+            this.gpEditar.Controls.Add(this.lblNome);
+            this.gpEditar.Controls.Add(this.txtNome);
+            this.gpEditar.Enabled = false;
+            this.gpEditar.Location = new System.Drawing.Point(12, 53);
+            this.gpEditar.Name = "gpEditar";
+            this.gpEditar.Size = new System.Drawing.Size(358, 271);
+            this.gpEditar.TabIndex = 74;
+            this.gpEditar.TabStop = false;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(139, 12);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(92, 35);
+            this.btnPesquisar.TabIndex = 1;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // btnApagar
+            // 
+            this.btnApagar.Enabled = false;
+            this.btnApagar.Location = new System.Drawing.Point(202, 341);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(117, 41);
+            this.btnApagar.TabIndex = 10;
+            this.btnApagar.Text = "Apagar";
+            this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(283, 12);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(69, 23);
+            this.btnLimpar.TabIndex = 11;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // frmUsuariosEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 358);
-            this.Controls.Add(this.lblId);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.lblTelefone);
-            this.Controls.Add(this.txtTelefone);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.lblCPF);
-            this.Controls.Add(this.txtCPF);
-            this.Controls.Add(this.lblSenha);
-            this.Controls.Add(this.txtSenha);
+            this.ClientSize = new System.Drawing.Size(384, 398);
+            this.Controls.Add(this.btnApagar);
+            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.gpEditar);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.lblObs);
-            this.Controls.Add(this.txtObs);
-            this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.txtNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmUsuariosEditar";
             this.Text = "Editar Usuário";
+            this.gpEditar.ResumeLayout(false);
+            this.gpEditar.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -215,5 +267,9 @@ namespace wfaSysEdit
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.GroupBox gpEditar;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Button btnApagar;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

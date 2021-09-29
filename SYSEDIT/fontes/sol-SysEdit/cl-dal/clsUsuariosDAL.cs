@@ -16,6 +16,8 @@ namespace cl_dal
     {
         private static SqlConnection _conexao;
         private static SqlCommand _comando;
+        private static SqlDataAdapter _adaptador;
+        private static DataTable _tabela;
 
         public int getProxID()
         {
@@ -90,6 +92,24 @@ namespace cl_dal
             _comando.ExecuteNonQuery();
 
             clsConexao.FecharConexao();
+        }
+
+        public DataTable listarTodos()
+        {
+            _conexao = clsConexao.ObterConexao();
+
+            _comando = new SqlCommand();
+            _comando.Connection = _conexao;
+
+            _comando.CommandText = "SELECT * FROM tblUsuarios";
+
+            _tabela = new DataTable();
+            _adaptador = new SqlDataAdapter(_comando);
+            _adaptador.Fill(_tabela);
+
+            clsConexao.FecharConexao();
+
+            return _tabela;
         }
     }
 }

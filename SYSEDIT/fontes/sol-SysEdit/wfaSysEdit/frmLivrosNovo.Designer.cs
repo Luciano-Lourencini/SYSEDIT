@@ -47,7 +47,7 @@ namespace wfaSysEdit
             this.btnSalvar.Location = new System.Drawing.Point(116, 172);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(150, 32);
-            this.btnSalvar.TabIndex = 37;
+            this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -66,7 +66,7 @@ namespace wfaSysEdit
             this.txtObs.Location = new System.Drawing.Point(33, 137);
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(337, 20);
-            this.txtObs.TabIndex = 35;
+            this.txtObs.TabIndex = 5;
             // 
             // lblAnoPubli
             // 
@@ -82,7 +82,7 @@ namespace wfaSysEdit
             this.txtAnoPubli.Location = new System.Drawing.Point(270, 86);
             this.txtAnoPubli.Name = "txtAnoPubli";
             this.txtAnoPubli.Size = new System.Drawing.Size(100, 20);
-            this.txtAnoPubli.TabIndex = 33;
+            this.txtAnoPubli.TabIndex = 4;
             // 
             // lblNome
             // 
@@ -98,7 +98,7 @@ namespace wfaSysEdit
             this.txtNome.Location = new System.Drawing.Point(33, 36);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(337, 20);
-            this.txtNome.TabIndex = 31;
+            this.txtNome.TabIndex = 1;
             // 
             // lblISBN
             // 
@@ -114,7 +114,7 @@ namespace wfaSysEdit
             this.txtISBN.Location = new System.Drawing.Point(33, 86);
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(100, 20);
-            this.txtISBN.TabIndex = 38;
+            this.txtISBN.TabIndex = 2;
             // 
             // lblEdiID
             // 
@@ -130,7 +130,7 @@ namespace wfaSysEdit
             this.txtEdiID.Location = new System.Drawing.Point(145, 86);
             this.txtEdiID.Name = "txtEdiID";
             this.txtEdiID.Size = new System.Drawing.Size(119, 20);
-            this.txtEdiID.TabIndex = 40;
+            this.txtEdiID.TabIndex = 3;
             // 
             // frmLivrosNovo
             // 

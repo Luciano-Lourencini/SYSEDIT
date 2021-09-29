@@ -52,7 +52,7 @@ namespace wfaSysEdit
             this.btnSelecionar.Location = new System.Drawing.Point(195, 258);
             this.btnSelecionar.Name = "btnSelecionar";
             this.btnSelecionar.Size = new System.Drawing.Size(75, 23);
-            this.btnSelecionar.TabIndex = 6;
+            this.btnSelecionar.TabIndex = 2;
             this.btnSelecionar.Text = "&Selecionar";
             this.btnSelecionar.UseVisualStyleBackColor = true;
             this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
@@ -62,7 +62,7 @@ namespace wfaSysEdit
             this.btnAtualizar.Location = new System.Drawing.Point(12, 258);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnAtualizar.TabIndex = 5;
+            this.btnAtualizar.TabIndex = 1;
             this.btnAtualizar.Text = "&Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
@@ -72,7 +72,7 @@ namespace wfaSysEdit
             this.btnSair.Location = new System.Drawing.Point(375, 258);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
-            this.btnSair.TabIndex = 4;
+            this.btnSair.TabIndex = 3;
             this.btnSair.Text = "&Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
