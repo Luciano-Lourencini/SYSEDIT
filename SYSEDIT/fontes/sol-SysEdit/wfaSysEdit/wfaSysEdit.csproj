@@ -91,17 +91,17 @@
     <Compile Include="frmLivrosEditar.Designer.cs">
       <DependentUpon>frmLivrosEditar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLivrosExcluir.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLivrosExcluir.Designer.cs">
-      <DependentUpon>frmLivrosExcluir.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmLivrosNovo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLivrosNovo.Designer.cs">
       <DependentUpon>frmLivrosNovo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLivrosPesquisar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLivrosPesquisar.Designer.cs">
+      <DependentUpon>frmLivrosPesquisar.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -150,11 +150,11 @@
     <EmbeddedResource Include="frmLivrosEditar.resx">
       <DependentUpon>frmLivrosEditar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLivrosExcluir.resx">
-      <DependentUpon>frmLivrosExcluir.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLivrosNovo.resx">
       <DependentUpon>frmLivrosNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLivrosPesquisar.resx">
+      <DependentUpon>frmLivrosPesquisar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
