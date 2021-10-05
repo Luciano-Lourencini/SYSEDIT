@@ -58,6 +58,7 @@ namespace wfaSysEdit
             // 
             this.txtObs.Enabled = false;
             this.txtObs.Location = new System.Drawing.Point(15, 123);
+            this.txtObs.MaxLength = 500;
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(363, 20);
             this.txtObs.TabIndex = 5;
@@ -75,6 +76,7 @@ namespace wfaSysEdit
             // 
             this.txtSigla.Enabled = false;
             this.txtSigla.Location = new System.Drawing.Point(278, 77);
+            this.txtSigla.MaxLength = 25;
             this.txtSigla.Name = "txtSigla";
             this.txtSigla.Size = new System.Drawing.Size(100, 20);
             this.txtSigla.TabIndex = 4;
@@ -92,6 +94,7 @@ namespace wfaSysEdit
             // 
             this.txtNome.Enabled = false;
             this.txtNome.Location = new System.Drawing.Point(15, 77);
+            this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(257, 20);
             this.txtNome.TabIndex = 3;

@@ -56,6 +56,7 @@ namespace wfaSysEdit
             // txtSenha
             // 
             this.txtSenha.Location = new System.Drawing.Point(29, 84);
+            this.txtSenha.MaxLength = 20;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(340, 20);
             this.txtSenha.TabIndex = 3;
@@ -82,6 +83,7 @@ namespace wfaSysEdit
             // txtObs
             // 
             this.txtObs.Location = new System.Drawing.Point(29, 212);
+            this.txtObs.MaxLength = 100;
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(340, 20);
             this.txtObs.TabIndex = 6;
@@ -98,6 +100,7 @@ namespace wfaSysEdit
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(168, 39);
+            this.txtNome.MaxLength = 70;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(201, 20);
             this.txtNome.TabIndex = 2;
@@ -114,6 +117,7 @@ namespace wfaSysEdit
             // txtCPF
             // 
             this.txtCPF.Location = new System.Drawing.Point(29, 39);
+            this.txtCPF.MaxLength = 11;
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(133, 20);
             this.txtCPF.TabIndex = 1;
@@ -130,6 +134,7 @@ namespace wfaSysEdit
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(29, 129);
+            this.txtEmail.MaxLength = 80;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(340, 20);
             this.txtEmail.TabIndex = 4;
@@ -146,6 +151,7 @@ namespace wfaSysEdit
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(29, 170);
+            this.txtTelefone.MaxLength = 11;
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(340, 20);
             this.txtTelefone.TabIndex = 5;

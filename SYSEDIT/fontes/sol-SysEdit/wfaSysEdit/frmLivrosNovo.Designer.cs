@@ -64,6 +64,7 @@ namespace wfaSysEdit
             // txtObs
             // 
             this.txtObs.Location = new System.Drawing.Point(33, 137);
+            this.txtObs.MaxLength = 500;
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(337, 20);
             this.txtObs.TabIndex = 5;
@@ -80,6 +81,7 @@ namespace wfaSysEdit
             // txtAnoPubli
             // 
             this.txtAnoPubli.Location = new System.Drawing.Point(270, 86);
+            this.txtAnoPubli.MaxLength = 4;
             this.txtAnoPubli.Name = "txtAnoPubli";
             this.txtAnoPubli.Size = new System.Drawing.Size(100, 20);
             this.txtAnoPubli.TabIndex = 4;
@@ -96,6 +98,7 @@ namespace wfaSysEdit
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(33, 36);
+            this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(337, 20);
             this.txtNome.TabIndex = 1;
@@ -112,6 +115,7 @@ namespace wfaSysEdit
             // txtISBN
             // 
             this.txtISBN.Location = new System.Drawing.Point(33, 86);
+            this.txtISBN.MaxLength = 14;
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(100, 20);
             this.txtISBN.TabIndex = 2;

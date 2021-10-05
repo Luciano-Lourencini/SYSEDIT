@@ -45,9 +45,9 @@ namespace wfaSysEdit
             this.lblId = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.gpEditar = new System.Windows.Forms.GroupBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnApagar = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.gpEditar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,7 @@ namespace wfaSysEdit
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(12, 198);
+            this.txtTelefone.MaxLength = 11;
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(340, 20);
             this.txtTelefone.TabIndex = 7;
@@ -79,6 +80,7 @@ namespace wfaSysEdit
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(12, 157);
+            this.txtEmail.MaxLength = 80;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(340, 20);
             this.txtEmail.TabIndex = 6;
@@ -95,6 +97,7 @@ namespace wfaSysEdit
             // txtCPF
             // 
             this.txtCPF.Location = new System.Drawing.Point(12, 67);
+            this.txtCPF.MaxLength = 11;
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(133, 20);
             this.txtCPF.TabIndex = 3;
@@ -111,6 +114,7 @@ namespace wfaSysEdit
             // txtSenha
             // 
             this.txtSenha.Location = new System.Drawing.Point(12, 112);
+            this.txtSenha.MaxLength = 20;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(340, 20);
             this.txtSenha.TabIndex = 5;
@@ -138,6 +142,7 @@ namespace wfaSysEdit
             // txtObs
             // 
             this.txtObs.Location = new System.Drawing.Point(12, 240);
+            this.txtObs.MaxLength = 100;
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(340, 20);
             this.txtObs.TabIndex = 8;
@@ -154,6 +159,7 @@ namespace wfaSysEdit
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(151, 67);
+            this.txtNome.MaxLength = 70;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(201, 20);
             this.txtNome.TabIndex = 4;
@@ -199,6 +205,16 @@ namespace wfaSysEdit
             this.gpEditar.TabIndex = 74;
             this.gpEditar.TabStop = false;
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(283, 12);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(69, 23);
+            this.btnLimpar.TabIndex = 11;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // btnPesquisar
             // 
             this.btnPesquisar.Location = new System.Drawing.Point(139, 12);
@@ -219,16 +235,6 @@ namespace wfaSysEdit
             this.btnApagar.Text = "Apagar";
             this.btnApagar.UseVisualStyleBackColor = true;
             this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.Location = new System.Drawing.Point(283, 12);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(69, 23);
-            this.btnLimpar.TabIndex = 11;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // frmUsuariosEditar
             // 
