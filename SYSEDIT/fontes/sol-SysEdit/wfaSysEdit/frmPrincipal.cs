@@ -64,5 +64,10 @@ namespace wfaSysEdit
             frmLivrosEditar livrosEditar = new frmLivrosEditar();
             livrosEditar.ShowDialog();
         }
+
+        private void tmPrincipal_Tick(object sender, EventArgs e)
+        {
+            tsslblTimer.Text = DateTime.Now.ToString();
+        }
     }
 }

@@ -19,6 +19,8 @@ namespace cl_dal
         private static SqlDataAdapter _adaptador;
         private static DataTable _tabela;
 
+        private static SqlDataReader _ReaderSql;
+
         private int getProximoID()
         {
             _conexao = clsConexao.ObterConexao();
@@ -108,6 +110,39 @@ namespace cl_dal
             clsConexao.FecharConexao();
 
             return _tabela;
+        }
+
+        public List<clsLivros> listarTodosArray()
+        {
+            List<clsLivros> lista = new List<clsLivros>();
+            clsLivros item = new clsLivros();
+
+            _conexao = clsConexao.ObterConexao();
+
+            _comando = new SqlCommand();
+            _comando.Connection = _conexao;
+
+            _comando.CommandText = "SELECT * FROM tblLivros";
+
+            _ReaderSql = _comando.ExecuteReader();
+
+            while(_ReaderSql.Read())
+            {
+                item.Codigo = int.Parse(_ReaderSql["LivID"].ToString());  //tentei o 'int.Parse()', mas é o 'Convert.ToInt32()'
+                item.Nome = _ReaderSql["LivNome"].ToString();
+                item.AnoPublicacao = int.Parse(_ReaderSql["LivAnoPublicacao"].ToString());
+                item.ISBN = double.Parse(_ReaderSql["LivISBN"].ToString());
+                item.Observacoes = _ReaderSql["LivObservacoes"].ToString();
+                item.EditoraCodigo = int.Parse(_ReaderSql["EdiID"].ToString());
+
+                lista.Add(item);
+            }
+
+            _ReaderSql.Close();
+
+            clsConexao.FecharConexao();
+
+            return lista;
         }
     }
 }

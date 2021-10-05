@@ -39,7 +39,7 @@ namespace wfaSysEdit
             this.lblISBN = new System.Windows.Forms.Label();
             this.txtISBN = new System.Windows.Forms.TextBox();
             this.lblEdiID = new System.Windows.Forms.Label();
-            this.txtEdiID = new System.Windows.Forms.TextBox();
+            this.cbEdiID = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -125,24 +125,25 @@ namespace wfaSysEdit
             this.lblEdiID.AutoSize = true;
             this.lblEdiID.Location = new System.Drawing.Point(142, 70);
             this.lblEdiID.Name = "lblEdiID";
-            this.lblEdiID.Size = new System.Drawing.Size(91, 13);
+            this.lblEdiID.Size = new System.Drawing.Size(40, 13);
             this.lblEdiID.TabIndex = 41;
-            this.lblEdiID.Text = "Código da Editora";
+            this.lblEdiID.Text = "Editora";
             // 
-            // txtEdiID
+            // cbEdiID
             // 
-            this.txtEdiID.Location = new System.Drawing.Point(145, 86);
-            this.txtEdiID.Name = "txtEdiID";
-            this.txtEdiID.Size = new System.Drawing.Size(119, 20);
-            this.txtEdiID.TabIndex = 3;
+            this.cbEdiID.FormattingEnabled = true;
+            this.cbEdiID.Location = new System.Drawing.Point(145, 86);
+            this.cbEdiID.Name = "cbEdiID";
+            this.cbEdiID.Size = new System.Drawing.Size(119, 21);
+            this.cbEdiID.TabIndex = 3;
             // 
             // frmLivrosNovo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 223);
+            this.Controls.Add(this.cbEdiID);
             this.Controls.Add(this.lblEdiID);
-            this.Controls.Add(this.txtEdiID);
             this.Controls.Add(this.lblISBN);
             this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.btnSalvar);
@@ -157,6 +158,7 @@ namespace wfaSysEdit
             this.MinimizeBox = false;
             this.Name = "frmLivrosNovo";
             this.Text = "Adicionar Livro";
+            this.Load += new System.EventHandler(this.frmLivrosNovo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,6 +176,6 @@ namespace wfaSysEdit
         private System.Windows.Forms.Label lblISBN;
         private System.Windows.Forms.TextBox txtISBN;
         private System.Windows.Forms.Label lblEdiID;
-        private System.Windows.Forms.TextBox txtEdiID;
+        private System.Windows.Forms.ComboBox cbEdiID;
     }
 }

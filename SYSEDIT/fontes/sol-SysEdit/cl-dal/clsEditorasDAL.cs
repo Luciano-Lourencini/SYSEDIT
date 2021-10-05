@@ -19,6 +19,8 @@ namespace cl_dal
         private static SqlDataAdapter _adaptador;
         private static DataTable _tabela;
 
+        private static SqlDataReader _ReaderSql; //permite ler os registros de retorno SQL     //não precisa de tabela
+
         public int getProxID()
         {
             _conexao = clsConexao.ObterConexao();
@@ -105,6 +107,58 @@ namespace cl_dal
             clsConexao.FecharConexao();
 
             return _tabela;
+        }
+
+        public DataTable listarTodosComboBox()  //o de cima traz muitas informações para só preencher um combo, por isso vou fazer esse com menos dados
+        {
+            _conexao = clsConexao.ObterConexao();
+
+            _comando = new SqlCommand();
+            _comando.Connection = _conexao;
+
+            _comando.CommandText = "SELECT EdiID, EdiSigla FROM tblEditoras";
+
+            _tabela = new DataTable();
+            _adaptador = new SqlDataAdapter(_comando);
+
+            _adaptador.Fill(_tabela);
+
+            clsConexao.FecharConexao();
+
+            return _tabela;
+        }
+
+        public List<clsEditoras> ListarTodosArray()  //isso sim é OO
+        {
+            //vai retornar uma lista de objetos do tipo Editoras
+
+            List<clsEditoras> lista = new List<clsEditoras>();
+            clsEditoras item = new clsEditoras();
+
+            _conexao = clsConexao.ObterConexao();
+
+            _comando = new SqlCommand();
+            _comando.Connection = _conexao;
+
+            _comando.CommandText = "SELECT * FROM tblEditoras";
+
+            _ReaderSql = _comando.ExecuteReader();  //o resultado da execução vai para o _ReaderSql
+
+            while(_ReaderSql.Read()) //para cada registro que eu leio, crio um item
+            {
+                item.Codigo = Convert.ToInt32(_ReaderSql["EdiID"].ToString());
+                item.Nome = _ReaderSql["EdiNome"].ToString();
+                item.Sigla = _ReaderSql["EdiSigla"].ToString();
+                item.Observacoes = _ReaderSql["EdiObservacoes"].ToString();
+
+                lista.Add(item);
+            } //quando terminar de ler todos os registros, a lista vai estar populada
+            
+            _ReaderSql.Close();
+
+            clsConexao.FecharConexao();
+
+            return lista;  //retorna a lista populada
         }
     }
 }

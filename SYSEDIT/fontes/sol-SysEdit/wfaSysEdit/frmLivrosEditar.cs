@@ -15,6 +15,15 @@ namespace wfaSysEdit
 {
     public partial class frmLivrosEditar : Form
     {
+        private clsEditorasDAL parEditorasDAL = new clsEditorasDAL();
+
+        private void carregarComboEditoras()
+        {
+            cbEdiID.DataSource = parEditorasDAL.listarTodosComboBox();
+            cbEdiID.DisplayMember = "EdiSigla";
+            cbEdiID.ValueMember = "EdiID";
+        }
+
         private bool IsNull(TextBox txt)
         {
             if (txt.Text.Trim().Length == 0)
@@ -35,7 +44,7 @@ namespace wfaSysEdit
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if(!(IsNull(txtEdiID)))
+            if(!(cbEdiID.SelectedIndex<0))
             {
                 if (!(IsNull(txtNome)))
                 {
@@ -53,7 +62,7 @@ namespace wfaSysEdit
                                     parLivros.Nome = txtNome.Text;
                                     parLivros.AnoPublicacao = int.Parse(txtAnoPubli.Text);
                                     parLivros.ISBN = double.Parse(txtISBN.Text);
-                                    parLivros.EditoraCodigo = int.Parse(txtEdiID.Text);
+                                    parLivros.EditoraCodigo = int.Parse(cbEdiID.SelectedValue.ToString());
                                     parLivros.Observacoes = txtObs.Text;
 
                                     clsLivrosDAL livrosDAL = new clsLivrosDAL();
@@ -62,14 +71,14 @@ namespace wfaSysEdit
                                     MessageBox.Show("Editado com Sucesso!");
 
                                     Limpar(txtAnoPubli);
-                                    Limpar(txtEdiID);
+                                    cbEdiID.SelectedIndex = -1;
                                     Limpar(txtISBN);
                                     Limpar(txtLivID);
                                     Limpar(txtNome);
                                     Limpar(txtObs);
 
                                     txtAnoPubli.Enabled = false;
-                                    txtEdiID.Enabled = false;
+                                    cbEdiID.Enabled = false;
                                     txtISBN.Enabled = false;
                                     txtLivID.Enabled = false;
                                     txtNome.Enabled = false;
@@ -134,14 +143,14 @@ namespace wfaSysEdit
                     MessageBox.Show("Livro Apagado!");
 
                     Limpar(txtAnoPubli);
-                    Limpar(txtEdiID);
+                    cbEdiID.SelectedIndex = -1;
                     Limpar(txtISBN);
                     Limpar(txtLivID);
                     Limpar(txtNome);
                     Limpar(txtObs);
 
                     txtAnoPubli.Enabled = false;
-                    txtEdiID.Enabled = false;
+                    cbEdiID.Enabled = false;
                     txtISBN.Enabled = false;
                     txtLivID.Enabled = false;
                     txtNome.Enabled = false;
@@ -167,10 +176,10 @@ namespace wfaSysEdit
                 txtAnoPubli.Text = livrosPesquisar.parLivros.AnoPublicacao.ToString();
                 txtISBN.Text = livrosPesquisar.parLivros.ISBN.ToString();
                 txtObs.Text = livrosPesquisar.parLivros.Observacoes;
-                txtEdiID.Text = livrosPesquisar.parLivros.EditoraCodigo.ToString();
+                cbEdiID.SelectedValue = livrosPesquisar.parLivros.EditoraCodigo.ToString();
 
                 txtAnoPubli.Enabled = true;
-                txtEdiID.Enabled = true;
+                cbEdiID.Enabled = true;
                 txtISBN.Enabled = true;
                 txtLivID.Enabled = true;
                 txtNome.Enabled = true;
@@ -184,14 +193,14 @@ namespace wfaSysEdit
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             Limpar(txtAnoPubli);
-            Limpar(txtEdiID);
+            cbEdiID.SelectedIndex = -1;
             Limpar(txtISBN);
             Limpar(txtLivID);
             Limpar(txtNome);
             Limpar(txtObs);
 
             txtAnoPubli.Enabled = false;
-            txtEdiID.Enabled = false;
+            cbEdiID.Enabled = false;
             txtISBN.Enabled = false;
             txtLivID.Enabled = false;
             txtNome.Enabled = false;
@@ -201,6 +210,12 @@ namespace wfaSysEdit
             btnLimpar.Enabled = false;
 
             btnPesquisar.Focus();
+        }
+
+        private void frmLivrosEditar_Load(object sender, EventArgs e)
+        {
+            carregarComboEditoras();
+            cbEdiID.SelectedIndex = -1;
         }
     }
 }

@@ -19,6 +19,8 @@ namespace cl_dal
         private DataTable _tabela;
         private SqlDataAdapter _adaptador;  //converte os dados do comando SQL para DataTable
 
+        private SqlDataReader _ReaderSql;
+
         private int getProxID()
         {
             _conexao = clsConexao.ObterConexao();
@@ -107,6 +109,37 @@ namespace cl_dal
             clsConexao.FecharConexao();
 
             return _tabela;
+        }
+
+        public List<clsAutores> listarTodosArray()
+        {
+            List<clsAutores> lista = new List<clsAutores>();
+            clsAutores item = new clsAutores();
+
+            _conexao = clsConexao.ObterConexao();
+
+            _comando = new SqlCommand();
+            _comando.Connection = _conexao;
+
+            _comando.CommandText = "SELECT * FROM tblAutores";
+
+            _ReaderSql = _comando.ExecuteReader();
+
+            while(_ReaderSql.Read())
+            {
+                item.Codigo = int.Parse(_ReaderSql["AutID"].ToString());
+                item.Nome = _ReaderSql["AutNome"].ToString();
+                item.Pseudonimo = _ReaderSql["AutPseudonimo"].ToString();
+                item.Observacoes = _ReaderSql["AutObservacoes"].ToString();
+
+                lista.Add(item);
+            }
+
+            _ReaderSql.Close();
+
+            clsConexao.FecharConexao();
+
+            return lista;
         }
     }
 }

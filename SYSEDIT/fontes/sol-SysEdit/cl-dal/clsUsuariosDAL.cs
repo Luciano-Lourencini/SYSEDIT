@@ -19,6 +19,8 @@ namespace cl_dal
         private static SqlDataAdapter _adaptador;
         private static DataTable _tabela;
 
+        private static SqlDataReader _ReaderSql;
+
         public int getProxID()
         {
             _conexao = clsConexao.ObterConexao();
@@ -110,6 +112,40 @@ namespace cl_dal
             clsConexao.FecharConexao();
 
             return _tabela;
+        }
+
+        public List<clsUsuarios> listarTodosArray()
+        {
+            List<clsUsuarios> lista = new List<clsUsuarios>();
+            clsUsuarios item = new clsUsuarios();
+
+            _conexao = clsConexao.ObterConexao();
+
+            _comando = new SqlCommand();
+            _comando.Connection = _conexao;
+
+            _comando.CommandText = "SELECT * FROM tblUsuarios";
+
+            _ReaderSql = _comando.ExecuteReader();
+
+            while(_ReaderSql.Read())
+            {
+                item.Codigo = int.Parse(_ReaderSql["UserID"].ToString());
+                item.CPF = double.Parse(_ReaderSql["UserCPF"].ToString());
+                item.Nome = _ReaderSql["UserNome"].ToString();
+                item.Senha = _ReaderSql["UserSenha"].ToString();
+                item.Email = _ReaderSql["UserEmail"].ToString();
+                item.Telefone = double.Parse(_ReaderSql["UserTelefone"].ToString());
+                item.Observacoes = _ReaderSql["UserObs"].ToString();
+
+                lista.Add(item);
+            }
+
+            _ReaderSql.Close();
+
+            clsConexao.FecharConexao();
+
+            return lista;
         }
     }
 }

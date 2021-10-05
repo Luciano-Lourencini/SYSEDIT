@@ -34,7 +34,6 @@ namespace wfaSysEdit
             this.gpEditar = new System.Windows.Forms.GroupBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.lblEdiID = new System.Windows.Forms.Label();
-            this.txtEdiID = new System.Windows.Forms.TextBox();
             this.lblISBN = new System.Windows.Forms.Label();
             this.txtLivID = new System.Windows.Forms.TextBox();
             this.txtISBN = new System.Windows.Forms.TextBox();
@@ -46,6 +45,7 @@ namespace wfaSysEdit
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnApagar = new System.Windows.Forms.Button();
+            this.cbEdiID = new System.Windows.Forms.ComboBox();
             this.gpEditar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,10 +71,10 @@ namespace wfaSysEdit
             // 
             // gpEditar
             // 
+            this.gpEditar.Controls.Add(this.cbEdiID);
             this.gpEditar.Controls.Add(this.btnLimpar);
             this.gpEditar.Controls.Add(this.lblEdiID);
             this.gpEditar.Controls.Add(this.lblLivID);
-            this.gpEditar.Controls.Add(this.txtEdiID);
             this.gpEditar.Controls.Add(this.lblISBN);
             this.gpEditar.Controls.Add(this.txtLivID);
             this.gpEditar.Controls.Add(this.txtISBN);
@@ -106,17 +106,9 @@ namespace wfaSysEdit
             this.lblEdiID.AutoSize = true;
             this.lblEdiID.Location = new System.Drawing.Point(124, 100);
             this.lblEdiID.Name = "lblEdiID";
-            this.lblEdiID.Size = new System.Drawing.Size(91, 13);
+            this.lblEdiID.Size = new System.Drawing.Size(40, 13);
             this.lblEdiID.TabIndex = 47;
-            this.lblEdiID.Text = "Código da Editora";
-            // 
-            // txtEdiID
-            // 
-            this.txtEdiID.Enabled = false;
-            this.txtEdiID.Location = new System.Drawing.Point(127, 116);
-            this.txtEdiID.Name = "txtEdiID";
-            this.txtEdiID.Size = new System.Drawing.Size(119, 20);
-            this.txtEdiID.TabIndex = 5;
+            this.lblEdiID.Text = "Editora";
             // 
             // lblISBN
             // 
@@ -220,6 +212,15 @@ namespace wfaSysEdit
             this.btnApagar.UseVisualStyleBackColor = true;
             this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
+            // cbEdiID
+            // 
+            this.cbEdiID.Enabled = false;
+            this.cbEdiID.FormattingEnabled = true;
+            this.cbEdiID.Location = new System.Drawing.Point(127, 115);
+            this.cbEdiID.Name = "cbEdiID";
+            this.cbEdiID.Size = new System.Drawing.Size(119, 21);
+            this.cbEdiID.TabIndex = 5;
+            // 
             // frmLivrosEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,6 +235,7 @@ namespace wfaSysEdit
             this.MinimizeBox = false;
             this.Name = "frmLivrosEditar";
             this.Text = "Editar Livros";
+            this.Load += new System.EventHandler(this.frmLivrosEditar_Load);
             this.gpEditar.ResumeLayout(false);
             this.gpEditar.PerformLayout();
             this.ResumeLayout(false);
@@ -255,9 +257,9 @@ namespace wfaSysEdit
         private System.Windows.Forms.Label lblAnoPubli;
         private System.Windows.Forms.TextBox txtAnoPubli;
         private System.Windows.Forms.Label lblEdiID;
-        private System.Windows.Forms.TextBox txtEdiID;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnApagar;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.ComboBox cbEdiID;
     }
 }
