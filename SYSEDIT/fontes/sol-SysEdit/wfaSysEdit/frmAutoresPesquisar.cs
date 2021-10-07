@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using cl_dal;
 using cl_models;
+using cl_bll;
 
 namespace wfaSysEdit
 {
@@ -19,10 +19,10 @@ namespace wfaSysEdit
 
         private void carregarGrid()  //método que carrega os dados
         {
-            clsAutoresDAL parAutores = new clsAutoresDAL();  //inicializa a variável
+            clsAutoresBLL parAutores = new clsAutoresBLL();  //inicializa a variável
 
             dgAutores.AutoGenerateColumns = true;  //para gerar as colunas de forma automática
-            dgAutores.DataSource = parAutores.ListarTodos();     //dg = data grid
+            dgAutores.DataSource = parAutores.listarTodos();     //dg = data grid
         }
 
         public frmAutoresPesquisar()

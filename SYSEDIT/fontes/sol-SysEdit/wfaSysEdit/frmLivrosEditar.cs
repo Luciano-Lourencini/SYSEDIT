@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using cl_dal;
+using cl_bll;
 using cl_models;
 
 namespace wfaSysEdit
 {
     public partial class frmLivrosEditar : Form
     {
-        private clsEditorasDAL parEditorasDAL = new clsEditorasDAL();
+        private clsEditorasBLL parEditorasBLL = new clsEditorasBLL();
 
         private void carregarComboEditoras()
         {
-            cbEdiID.DataSource = parEditorasDAL.listarTodosComboBox();
+            cbEdiID.DataSource = parEditorasBLL.listarTodosComboBox();
             cbEdiID.DisplayMember = "EdiSigla";
             cbEdiID.ValueMember = "EdiID";
         }
@@ -65,8 +65,8 @@ namespace wfaSysEdit
                                     parLivros.EditoraCodigo = int.Parse(cbEdiID.SelectedValue.ToString());
                                     parLivros.Observacoes = txtObs.Text;
 
-                                    clsLivrosDAL livrosDAL = new clsLivrosDAL();
-                                    livrosDAL.Editar(parLivros);
+                                    clsLivrosBLL livrosBLL = new clsLivrosBLL();
+                                    livrosBLL.Editar(parLivros);
 
                                     MessageBox.Show("Editado com Sucesso!");
 
@@ -138,8 +138,8 @@ namespace wfaSysEdit
                     clsLivros parLivros = new clsLivros();
                     parLivros.Codigo = int.Parse(txtLivID.Text);
 
-                    clsLivrosDAL livrosDAL = new clsLivrosDAL();
-                    livrosDAL.Apagar(parLivros);
+                    clsLivrosBLL livrosBLL = new clsLivrosBLL();
+                    livrosBLL.Apagar(parLivros);
                     MessageBox.Show("Livro Apagado!");
 
                     Limpar(txtAnoPubli);

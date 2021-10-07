@@ -191,6 +191,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\cl-bll\cl-bll.csproj">
+      <Project>{4fd6c284-f33b-4726-95f5-f7b95a1d0f3e}</Project>
+      <Name>cl-bll</Name>
+    </ProjectReference>
     <ProjectReference Include="..\cl-dal\cl-dal.csproj">
       <Project>{8c2ad565-908f-4dcc-a282-bac866aa39f4}</Project>
       <Name>cl-dal</Name>

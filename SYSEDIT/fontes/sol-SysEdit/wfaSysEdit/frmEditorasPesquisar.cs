@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using cl_dal;
 using cl_models;
+using cl_bll;
 
 namespace wfaSysEdit
 {
@@ -19,9 +19,9 @@ namespace wfaSysEdit
 
         private void carregarGrid()
         {
-            clsEditorasDAL editorasDAL = new clsEditorasDAL();
+            clsEditorasBLL editorasBLL = new clsEditorasBLL();
             dgEditoras.AutoGenerateColumns = true;
-            dgEditoras.DataSource = editorasDAL.listarTodos();
+            dgEditoras.DataSource = editorasBLL.listarTodos();
         }
 
         public frmEditorasPesquisar()

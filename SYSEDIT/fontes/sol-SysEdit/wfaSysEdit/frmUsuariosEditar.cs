@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using cl_dal;
+using cl_bll;
 using cl_models;
 
 namespace wfaSysEdit
@@ -36,8 +36,8 @@ namespace wfaSysEdit
                     parUsuarios.Telefone = double.Parse(txtTelefone.Text);
                     parUsuarios.Observacoes = txtObs.Text;
 
-                    clsUsuariosDAL usuariosDAL = new clsUsuariosDAL();
-                    usuariosDAL.Editar(parUsuarios);
+                    clsUsuariosBLL usuariosBLL = new clsUsuariosBLL();
+                    usuariosBLL.Editar(parUsuarios);
 
                     clsMensagens.Mensagem("Usuário editado com sucesso!", clsMensagens.tipoMensagem.sucesso);
 
@@ -99,8 +99,8 @@ namespace wfaSysEdit
                         clsUsuarios parUsuarios = new clsUsuarios();
                         parUsuarios.Codigo = int.Parse(txtId.Text);
 
-                        clsUsuariosDAL usuariosDAL = new clsUsuariosDAL();
-                        usuariosDAL.Apagar(parUsuarios);
+                        clsUsuariosBLL usuariosBLL = new clsUsuariosBLL();
+                        usuariosBLL.Apagar(parUsuarios);
 
                         clsLimpar.Limpar(txtId);
                         txtId.Focus();

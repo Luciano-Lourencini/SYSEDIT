@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using cl_dal;
+using cl_bll;
 using cl_models;
 
 namespace wfaSysEdit
@@ -50,8 +50,8 @@ namespace wfaSysEdit
                             parEditoras.Sigla = txtSigla.Text;
                             parEditoras.Observacoes = txtObs.Text;
 
-                            clsEditorasDAL editorasDAL = new clsEditorasDAL();
-                            editorasDAL.Editar(parEditoras);
+                            clsEditorasBLL editorasBLL = new clsEditorasBLL();
+                            editorasBLL.Editar(parEditoras);
                             MessageBox.Show("Editado com sucesso!");
 
                             clsLimpar.Limpar(txtEdiID);
@@ -131,8 +131,8 @@ namespace wfaSysEdit
                         clsEditoras parEditoras = new clsEditoras();
                         parEditoras.Codigo = int.Parse(txtEdiID.Text);
 
-                        clsEditorasDAL editorasDAL = new clsEditorasDAL();
-                        editorasDAL.Apagar(parEditoras);
+                        clsEditorasBLL editorasBLL = new clsEditorasBLL();
+                        editorasBLL.Apagar(parEditoras);
                         MessageBox.Show("Editora Apagada!");
 
                         clsLimpar.Limpar(txtEdiID);

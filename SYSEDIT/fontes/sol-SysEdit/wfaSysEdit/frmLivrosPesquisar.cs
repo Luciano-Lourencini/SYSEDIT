@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using cl_dal;
+using cl_bll;
 using cl_models;
 
 namespace wfaSysEdit
@@ -19,9 +19,9 @@ namespace wfaSysEdit
 
         private void carregarGrid()
         {
-            clsLivrosDAL livrosDAL = new clsLivrosDAL();
+            clsLivrosBLL livrosBLL = new clsLivrosBLL();
             dgLivros.AutoGenerateColumns = true;
-            dgLivros.DataSource = livrosDAL.listarTodos();
+            dgLivros.DataSource = livrosBLL.listarTodos();
             formatarGrid();
         }
 

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using cl_dal;
+using cl_bll;
 using cl_models;
 
 namespace wfaSysEdit
@@ -16,11 +16,11 @@ namespace wfaSysEdit
     //Livro é o único a ter FK, por isso tem o ComboBox
     public partial class frmLivrosNovo : Form
     {
-        private clsEditorasDAL parEditorasDAL = new clsEditorasDAL(); //private para ninguém acessar além dele
+        private clsEditorasBLL parEditorasBLL = new clsEditorasBLL(); //private para ninguém acessar além dele
 
         private void carregarComboEditoras()  //ComboBox
         {
-            cbEdiID.DataSource = parEditorasDAL.listarTodosComboBox();
+            cbEdiID.DataSource = parEditorasBLL.listarTodosComboBox();
             cbEdiID.DisplayMember = "EdiSigla";  //exiba essa coluna    //qual o campo que eu quero que exiba
             cbEdiID.ValueMember = "EdiID";  //qual vai ser o valor que ele representa    //ex: 'Abril' vai valer '1'
         }
@@ -63,8 +63,8 @@ namespace wfaSysEdit
                                 parLivros.Observacoes = txtObs.Text;
                                 parLivros.EditoraCodigo = int.Parse(cbEdiID.SelectedValue.ToString());
 
-                                clsLivrosDAL livrosDAL = new clsLivrosDAL();
-                                livrosDAL.Salvar(parLivros);
+                                clsLivrosBLL livrosBLL = new clsLivrosBLL();
+                                livrosBLL.Salvar(parLivros);
 
                                 MessageBox.Show("Livro cadastrado com sucesso!");
 

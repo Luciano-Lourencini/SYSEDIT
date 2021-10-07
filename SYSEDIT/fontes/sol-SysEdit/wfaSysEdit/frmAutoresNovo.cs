@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using cl_dal;
 using cl_models;
+using cl_bll;
 
 namespace wfaSysEdit
 {
@@ -42,8 +42,8 @@ namespace wfaSysEdit
                         parAutores.Pseudonimo = txtPseud.Text;
                         parAutores.Observacoes = txtObs.Text;
 
-                        clsAutoresDAL autoresDAL = new clsAutoresDAL();
-                        autoresDAL.Salvar(parAutores);
+                        clsAutoresBLL autoresBLL = new clsAutoresBLL();
+                        autoresBLL.Salvar(parAutores);
 
                         MessageBox.Show("Autor Salvo com Sucesso!");
 

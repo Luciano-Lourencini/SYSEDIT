@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using cl_dal;
 using cl_models;
+using cl_bll;
 
 namespace wfaSysEdit
 {
@@ -45,8 +45,8 @@ namespace wfaSysEdit
                             parAutores.Pseudonimo = txtPseud.Text;
                             parAutores.Observacoes = txtObs.Text;
 
-                            clsAutoresDAL autoresDAL = new clsAutoresDAL();
-                            autoresDAL.Editar(parAutores);
+                            clsAutoresBLL autoresBLL = new clsAutoresBLL();
+                            autoresBLL.Editar(parAutores);
                             MessageBox.Show("Autor Editado com Sucesso!");
 
                             txtAutID.Clear();
@@ -128,8 +128,8 @@ namespace wfaSysEdit
                         clsAutores parAutores = new clsAutores();
                         parAutores.Codigo = int.Parse(txtAutID.Text);
 
-                        clsAutoresDAL autoresDAL = new clsAutoresDAL();
-                        autoresDAL.Apagar(parAutores);
+                        clsAutoresBLL autoresBLL = new clsAutoresBLL();
+                        autoresBLL.Apagar(parAutores);
                         MessageBox.Show("Autor Apagado!");
 
                         clsLimpar.Limpar(txtAutID);

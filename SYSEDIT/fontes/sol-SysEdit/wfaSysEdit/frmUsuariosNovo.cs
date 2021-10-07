@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using cl_dal;
+using cl_bll;
 using cl_models;
 
 namespace wfaSysEdit
@@ -49,8 +49,8 @@ namespace wfaSysEdit
                     parUsuarios.Telefone = double.Parse(txtTelefone.Text);
                     parUsuarios.Observacoes = txtObs.Text;
 
-                    clsUsuariosDAL usuariosDAL = new clsUsuariosDAL();
-                    usuariosDAL.Salvar(parUsuarios);
+                    clsUsuariosBLL usuariosBLL = new clsUsuariosBLL();
+                    usuariosBLL.Salvar(parUsuarios);
 
                     clsMensagens.Mensagem("Usuário cadastrado com sucesso!", clsMensagens.tipoMensagem.sucesso);
 

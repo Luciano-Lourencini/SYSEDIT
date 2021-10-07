@@ -21,7 +21,7 @@ namespace cl_dal
 
         private static SqlDataReader _ReaderSql;
 
-        private int getProximoID()
+        public int getProximoID()
         {
             _conexao = clsConexao.ObterConexao();
 

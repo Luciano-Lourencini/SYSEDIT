@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using cl_dal;
+using cl_bll;
 using cl_models;
 
 namespace wfaSysEdit
@@ -48,8 +48,8 @@ namespace wfaSysEdit
                         Editora.Observacoes = txtObs.Text;
 
 
-                        clsEditorasDAL editorasDAL = new clsEditorasDAL();
-                        editorasDAL.Salvar(Editora);
+                        clsEditorasBLL editorasBLL = new clsEditorasBLL();
+                        editorasBLL.Salvar(Editora);
 
                         MessageBox.Show("Editora Cadastrada!");
 
