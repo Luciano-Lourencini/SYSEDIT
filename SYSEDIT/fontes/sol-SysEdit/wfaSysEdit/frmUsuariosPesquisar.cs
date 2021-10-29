@@ -15,14 +15,29 @@ namespace wfaSysEdit
 {
     public partial class frmUsuariosPesquisar : Form
     {
+        private bool entrouCelula = false;
         public clsUsuarios parUsuarios = new clsUsuarios();
+        private clsUsuariosBLL usuariosBLL = new clsUsuariosBLL();
+
+        private void filtrarGrid()
+        {
+            DataTable dt = usuariosBLL.listarTodos();
+            dt.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", "UserNome",txtBuscarNome.Text);
+            dgUsuarios.DataSource = dt.DefaultView;
+        }
 
         private void carregarGrid()
         {
-            clsUsuariosBLL usuariosBLL = new clsUsuariosBLL();
-            dgUsuarios.AutoGenerateColumns = true;
-            dgUsuarios.DataSource = usuariosBLL.listarTodos();
-            formatarGrid();
+            try
+            {
+                dgUsuarios.AutoGenerateColumns = true;
+                dgUsuarios.DataSource = usuariosBLL.listarTodos();
+                formatarGrid();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public frmUsuariosPesquisar()
@@ -32,25 +47,28 @@ namespace wfaSysEdit
 
         private void btnSelecionar_Click(object sender, EventArgs e)
         {
-            try
+            if (entrouCelula == true)
             {
-                int vI = 0;
-                vI = int.Parse(dgUsuarios.CurrentRow.Index.ToString());
+                try
+                {
+                    int vI = 0;
+                    vI = int.Parse(dgUsuarios.CurrentRow.Index.ToString());
 
-                parUsuarios.Codigo = int.Parse(dgUsuarios[0, vI].Value.ToString());
-                parUsuarios.CPF = double.Parse(dgUsuarios[1, vI].Value.ToString());
-                parUsuarios.Nome = dgUsuarios[2, vI].Value.ToString();
-                parUsuarios.Senha = dgUsuarios[3, vI].Value.ToString();
-                parUsuarios.Email = dgUsuarios[4, vI].Value.ToString();
-                parUsuarios.Telefone = double.Parse(dgUsuarios[5, vI].Value.ToString());
-                parUsuarios.Observacoes = dgUsuarios[6, vI].Value.ToString();
+                    parUsuarios.Codigo = int.Parse(dgUsuarios[0, vI].Value.ToString());
+                    parUsuarios.CPF = double.Parse(dgUsuarios[1, vI].Value.ToString());
+                    parUsuarios.Nome = dgUsuarios[2, vI].Value.ToString();
+                    parUsuarios.Senha = dgUsuarios[3, vI].Value.ToString();
+                    parUsuarios.Email = dgUsuarios[4, vI].Value.ToString();
+                    parUsuarios.Telefone = double.Parse(dgUsuarios[5, vI].Value.ToString());
+                    parUsuarios.Observacoes = dgUsuarios[6, vI].Value.ToString();
 
-                this.Close();
+                    this.Close();
 
-            }
-            catch(Exception ex)
-            {
-                clsMensagens.Mensagem(ex.Message, clsMensagens.tipoMensagem.erro);
+                }
+                catch (Exception ex)
+                {
+                    clsMensagens.Mensagem(ex.Message, clsMensagens.tipoMensagem.erro);
+                }
             }
         }
 
@@ -84,6 +102,16 @@ namespace wfaSysEdit
             dgUsuarios.Columns[6].HeaderText = "Observação";
 
             //dgUsuarios.Columns[3].Visible = false;
+        }
+
+        private void dgUsuarios_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            entrouCelula = true;
+        }
+
+        private void txtBuscarNome_KeyUp(object sender, KeyEventArgs e)
+        {
+            filtrarGrid();
         }
     }
 }

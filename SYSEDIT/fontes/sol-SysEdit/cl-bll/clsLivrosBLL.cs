@@ -18,32 +18,74 @@ namespace cl_bll
 
         public int getProxID()
         {
-            return dal.getProximoID();
+            try
+            {
+                return dal.getProximoID();
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("clsLivrosBLL: " + ex.Message);
+            }
         }
 
         public void Salvar(clsLivros parLivros)
         {
-            dal.Salvar(parLivros);
+            try
+            {
+                dal.Salvar(parLivros);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsLivrosBLL: " + ex.Message);
+            }
         }
 
         public void Editar(clsLivros parLivros)
         {
-            dal.Editar(parLivros);
+            try
+            {
+                dal.Editar(parLivros);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsLivrosBLL: " + ex.Message);
+            }
         }
 
         public void Apagar(clsLivros parLivros)
         {
-            dal.Apagar(parLivros);
+            try
+            {
+                dal.Apagar(parLivros);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsLivrosBLL: " + ex.Message);
+            }
         }
 
         public DataTable listarTodos()
         {
-            return dal.listarTodos();
+            try
+            {
+                return dal.listarTodos();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsLivrosBLL: " + ex.Message);
+            }
         }
 
         public List<clsLivros> listarTodosArray()
         {
-            return dal.listarTodosArray();
+            try
+            {
+                return dal.listarTodosArray();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsLivrosBLL: " + ex.Message);
+            }
         }
     }
 }

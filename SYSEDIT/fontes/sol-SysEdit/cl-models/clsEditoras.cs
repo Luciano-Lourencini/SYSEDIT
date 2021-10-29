@@ -13,7 +13,25 @@ namespace cl_models
         public string Sigla
         {
             get { return _sigla; }
-            set { _sigla = value; }
+            set 
+            {
+                try
+                {
+                    if (value.Trim().Length >= 15)
+                    {
+                        throw new Exception("Sigla deve conter no máximo 15 caracteres!");
+                    }
+                    else
+                    {
+                        _sigla = value;
+                    }
+                }
+                catch(Exception ex)
+                {
+                    throw new Exception("clsEditoras: " + ex.Message);
+                }
+                
+            }
         }
     }
 }

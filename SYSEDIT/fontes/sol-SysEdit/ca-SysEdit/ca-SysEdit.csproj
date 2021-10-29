@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>ca_SysEdit</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\cl-bll\cl-bll.csproj" />
+    <ProjectReference Include="..\cl-models\cl-models.csproj" />
+  </ItemGroup>
+
+</Project>

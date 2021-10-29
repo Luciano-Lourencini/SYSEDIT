@@ -17,37 +17,99 @@ namespace cl_bll
         clsEditorasDAL dal = new clsEditorasDAL();
         public int getProxID()
         {
-            return dal.getProxID();
+            try
+            {
+                return dal.getProxID();
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("clsEditorasBLL: " + ex.Message);
+            }
         }
 
         public void Salvar(clsEditoras parEditoras)
         {
-            dal.Salvar(parEditoras);
+            /*
+             * Não vou colocar aqui porque é uma VALIDAÇÃO DE DADOS, não REGRA DE NEGÓCIOS
+             * (é algo lógico, não algo adotado pela empresa)
+             
+            try
+            {
+                if(parEditoras.Sigla.Trim().Length >= 15)
+                {
+                    throw new Exception("Sigla deve ter no máximo 15 caracteres!");
+                }
+                dal.Salvar(parEditoras);
+            }
+            */
+            try
+            {
+                dal.Salvar(parEditoras);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsEditorasBLL: " + ex.Message);
+            }
         }
 
         public void Editar(clsEditoras parEditoras)
         {
-            dal.Editar(parEditoras);
+            try
+            {
+                dal.Editar(parEditoras);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsEditorasBLL: " + ex.Message);
+            }
         }
 
         public void Apagar(clsEditoras parEditoras)
         {
-            dal.Apagar(parEditoras);
+            try
+            {
+                dal.Apagar(parEditoras);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsEditorasBLL: " + ex.Message);
+            }
         }
 
         public DataTable listarTodos()
         {
-            return dal.listarTodos();
+            try
+            {
+                return dal.listarTodos();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsEditorasBLL: " + ex.Message);
+            }
         }
 
         public DataTable listarTodosComboBox()
         {
-            return dal.listarTodosComboBox();
+            try
+            {
+                return dal.listarTodosComboBox();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsEditorasBLL: " + ex.Message);
+            }
         }
 
         public List<clsEditoras> listarTodosArray()
         {
-            return dal.ListarTodosArray();
+            try
+            {
+                return dal.ListarTodosArray();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsEditorasBLL: " + ex.Message);
+            }
         }
     }
 }

@@ -20,40 +20,82 @@ namespace cl_bll
     {
         public int getProxID()
         {
-            clsAutoresDAL dal = new clsAutoresDAL();
-            return dal.getProxID();
+            try
+            {
+                //só estou encaminahndo pra lá   ->  Está servindo de intermediária
+                clsAutoresDAL dal = new clsAutoresDAL();
+                return dal.getProxID();
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("clsAutoresBLL: " + ex.Message);  //não coloquei o MessageBox porque não tem o Forms referenciado
+            }
+            
         }
 
         public void Salvar(clsAutores parAutores)
         {
-            //só estou encaminahndo pra lá   ->  Está servindo de intermediária
-
-            clsAutoresDAL dal = new clsAutoresDAL();
-            dal.Salvar(parAutores);
+            try
+            {
+                clsAutoresDAL dal = new clsAutoresDAL();
+                dal.Salvar(parAutores);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsAutoresBLL: " + ex.Message);
+            }
         }
 
         public void Editar(clsAutores parAutores)
         {
-            clsAutoresDAL dal = new clsAutoresDAL();
-            dal.Editar(parAutores);
+            try
+            {
+                clsAutoresDAL dal = new clsAutoresDAL();
+                dal.Editar(parAutores);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsAutoresBLL: " + ex.Message);
+            }
         }
 
         public void Apagar(clsAutores parAutores)
         {
-            clsAutoresDAL dal = new clsAutoresDAL();
-            dal.Apagar(parAutores);
+            try
+            {
+                clsAutoresDAL dal = new clsAutoresDAL();
+                dal.Apagar(parAutores);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsAutoresBLL: " + ex.Message);
+            }
         }
 
         public DataTable listarTodos()
         {
-            clsAutoresDAL dal = new clsAutoresDAL();
-            return dal.ListarTodos();
+            try
+            {
+                clsAutoresDAL dal = new clsAutoresDAL();
+                return dal.ListarTodos();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsAutoresBLL: " + ex.Message);
+            }
         }
 
         public List<clsAutores> listarTodosArray()
         {
-            clsAutoresDAL dal = new clsAutoresDAL();
-            return dal.listarTodosArray();
+            try
+            {
+                clsAutoresDAL dal = new clsAutoresDAL();
+                return dal.listarTodosArray();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("clsAutoresBLL: " + ex.Message);
+            }
         }
     }
 }

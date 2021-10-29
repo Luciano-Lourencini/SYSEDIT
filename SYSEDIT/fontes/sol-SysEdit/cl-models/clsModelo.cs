@@ -15,7 +15,24 @@ namespace cl_models
         public int Codigo
         {
             get { return _codigo; }
-            set { _codigo = value; }
+            set 
+            { 
+                try  //não fiz na regra de negócio pois NÃO É TRATAMENTO DE ERRO, mas VALIDAÇÃO DE VALORES
+                {
+                    if(value < -1)
+                    {
+                        throw new Exception("Código deve ser positivo!");
+                    }
+                    else
+                    {
+                        _codigo = value;
+                    }
+                }
+                catch(Exception ex)
+                {
+                    throw new Exception("clsModelo: " + ex.Message);
+                }
+            }
         }
 
         public string Nome

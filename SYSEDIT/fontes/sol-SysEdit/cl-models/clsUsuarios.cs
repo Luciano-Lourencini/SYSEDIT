@@ -16,7 +16,24 @@ namespace cl_models
         public double CPF
         {
             get { return _cpf; }
-            set { _cpf = value; }
+            set 
+            { 
+                try
+                {
+                    if(value.ToString().Trim().Length != 11)
+                    {
+                        throw new Exception("CPF deve conter 11 números!");
+                    }
+                    else
+                    {
+                        _cpf = value;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("clsUsuarios: " + ex.Message);
+                }
+            }
         }
 
         public string Senha
@@ -34,7 +51,24 @@ namespace cl_models
         public double Telefone
         {
             get { return _telefone; }
-            set { _telefone = value; }
+            set 
+            { 
+                try
+                {
+                    if(value.ToString().Trim().Length < 11)
+                    {
+                        throw new Exception("Telefone deve conter 11 números!");
+                    }
+                    else
+                    {
+                        _telefone = value;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("clsUsuarios: " + ex.Message);
+                }
+            }
         }
     }
 }

@@ -33,6 +33,8 @@ namespace wfaSysEdit
             this.btnSelecionar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.lblBuscarNome = new System.Windows.Forms.Label();
+            this.txtBuscarNome = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgEditoras)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,10 +48,11 @@ namespace wfaSysEdit
             this.dgEditoras.ReadOnly = true;
             this.dgEditoras.Size = new System.Drawing.Size(438, 240);
             this.dgEditoras.TabIndex = 0;
+            this.dgEditoras.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgEditoras_CellEnter);
             // 
             // btnSelecionar
             // 
-            this.btnSelecionar.Location = new System.Drawing.Point(195, 258);
+            this.btnSelecionar.Location = new System.Drawing.Point(198, 311);
             this.btnSelecionar.Name = "btnSelecionar";
             this.btnSelecionar.Size = new System.Drawing.Size(75, 23);
             this.btnSelecionar.TabIndex = 2;
@@ -59,7 +62,7 @@ namespace wfaSysEdit
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(12, 258);
+            this.btnAtualizar.Location = new System.Drawing.Point(15, 311);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
             this.btnAtualizar.TabIndex = 1;
@@ -69,7 +72,7 @@ namespace wfaSysEdit
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(375, 258);
+            this.btnSair.Location = new System.Drawing.Point(378, 311);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 3;
@@ -77,12 +80,31 @@ namespace wfaSysEdit
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // lblBuscarNome
+            // 
+            this.lblBuscarNome.AutoSize = true;
+            this.lblBuscarNome.Location = new System.Drawing.Point(19, 272);
+            this.lblBuscarNome.Name = "lblBuscarNome";
+            this.lblBuscarNome.Size = new System.Drawing.Size(92, 13);
+            this.lblBuscarNome.TabIndex = 17;
+            this.lblBuscarNome.Text = "Buscar por Nome:";
+            // 
+            // txtBuscarNome
+            // 
+            this.txtBuscarNome.Location = new System.Drawing.Point(117, 269);
+            this.txtBuscarNome.Name = "txtBuscarNome";
+            this.txtBuscarNome.Size = new System.Drawing.Size(329, 20);
+            this.txtBuscarNome.TabIndex = 16;
+            this.txtBuscarNome.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarNome_KeyUp);
+            // 
             // frmEditorasPesquisar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 285);
+            this.ClientSize = new System.Drawing.Size(463, 348);
             this.ControlBox = false;
+            this.Controls.Add(this.lblBuscarNome);
+            this.Controls.Add(this.txtBuscarNome);
             this.Controls.Add(this.btnSelecionar);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnSair);
@@ -93,6 +115,7 @@ namespace wfaSysEdit
             this.Load += new System.EventHandler(this.frmEditorasPesquisar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgEditoras)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -102,5 +125,7 @@ namespace wfaSysEdit
         private System.Windows.Forms.Button btnSelecionar;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label lblBuscarNome;
+        private System.Windows.Forms.TextBox txtBuscarNome;
     }
 }
