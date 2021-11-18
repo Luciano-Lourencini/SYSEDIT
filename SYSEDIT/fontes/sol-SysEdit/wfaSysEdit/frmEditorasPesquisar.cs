@@ -85,10 +85,11 @@ namespace wfaSysEdit
             dgEditoras.ReadOnly = true;
             dgEditoras.MultiSelect = false;
 
-            dgEditoras.Columns[0].HeaderText = "Código";
             dgEditoras.Columns[1].HeaderText = "Nome";
             dgEditoras.Columns[2].HeaderText = "Sigla";
             dgEditoras.Columns[3].HeaderText = "Observações";
+
+            dgEditoras.Columns[0].Visible = false;
         }
 
         private void btnSair_Click(object sender, EventArgs e)

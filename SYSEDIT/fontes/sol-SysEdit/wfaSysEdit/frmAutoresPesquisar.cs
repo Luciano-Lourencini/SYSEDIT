@@ -95,12 +95,14 @@ namespace wfaSysEdit
 
             dgAutores.ScrollBars = ScrollBars.Vertical;  //só vai ter scroll vertical
 
-            dgAutores.Columns[0].HeaderText = "Código";
+            //dgAutores.Columns[0].HeaderText = "Código";
             dgAutores.Columns[1].HeaderText = "Nome";
             dgAutores.Columns[2].HeaderText = "Pseudônimo";
             dgAutores.Columns[3].HeaderText = "Observações";
 
-            dgAutores.Columns[0].Width = 50;
+            dgAutores.Columns[0].Visible = false;
+
+            //dgAutores.Columns[0].Width = 50;
         }
 
         private void dgAutores_CellEnter(object sender, DataGridViewCellEventArgs e)

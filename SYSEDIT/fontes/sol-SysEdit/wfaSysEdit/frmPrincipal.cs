@@ -69,5 +69,22 @@ namespace wfaSysEdit
         {
             tsslblTimer.Text = DateTime.Now.ToString();
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.ShowDialog();
+
+            if(login.acessoPermitido == false)
+            {
+                this.Close();
+            }
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSobre sobre = new frmSobre();
+            sobre.ShowDialog();
+        }
     }
 }

@@ -91,12 +91,14 @@ namespace wfaSysEdit
             dgLivros.ReadOnly = true;
             dgLivros.MultiSelect = false;
 
-            dgLivros.Columns[0].HeaderText = "Código";
+            //dgLivros.Columns[0].HeaderText = "Código";
             dgLivros.Columns[1].HeaderText = "Nome";
             dgLivros.Columns[2].HeaderText = "Ano de Publicação";
             dgLivros.Columns[3].HeaderText = "ISBN";
             dgLivros.Columns[4].HeaderText = "Observações";
             dgLivros.Columns[5].HeaderText = "Código da Editora";
+
+            dgLivros.Columns[0].Visible = false;
         }
 
         private void dgLivros_CellEnter(object sender, DataGridViewCellEventArgs e)

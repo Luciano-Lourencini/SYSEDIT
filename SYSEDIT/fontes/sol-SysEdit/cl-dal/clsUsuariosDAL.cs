@@ -114,6 +114,37 @@ namespace cl_dal
             return _tabela;
         }
 
+        public clsUsuarios login(string email,string senha)
+        {
+            clsUsuarios parUsuarios = null;
+
+            _conexao = clsConexao.ObterConexao();
+
+            _comando = new SqlCommand();
+            _comando.Connection = _conexao;
+
+            _comando.CommandText = "SELECT * FROM tblUsuarios where @email = UserEmail and @senha = UserSenha";
+            _comando.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
+            _comando.Parameters.Add("@senha",SqlDbType.VarChar).Value = senha;
+
+            _ReaderSql = _comando.ExecuteReader();
+
+            while(_ReaderSql.Read())
+            {
+                parUsuarios = new clsUsuarios();
+
+                parUsuarios.Email = _ReaderSql["UserEmail"].ToString();
+                parUsuarios.Senha = _ReaderSql["UserSenha"].ToString();
+                parUsuarios.Nome = _ReaderSql["UserNome"].ToString();
+            }
+
+            _ReaderSql.Close();
+
+            clsConexao.FecharConexao();
+
+            return parUsuarios;
+        }
+
         public List<clsUsuarios> listarTodosArray()
         {
             List<clsUsuarios> lista = new List<clsUsuarios>();

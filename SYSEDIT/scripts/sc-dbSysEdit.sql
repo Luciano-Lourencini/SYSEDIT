@@ -43,3 +43,5 @@ create table tblUsuarios(
 	UserTelefone	decimal(11,0)	not null	unique,
 	UserObs			varchar(100)		null
 );
+
+insert into tblUsuarios values (1,11111111111,'admin','admin','admin@admin.com',11111111111,'admin')

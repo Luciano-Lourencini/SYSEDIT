@@ -41,24 +41,7 @@ namespace cl_models
         public double ISBN
         {
             get { return _isbn; }
-            set 
-            { 
-                try
-                {
-                    if(_isbn.ToString().Trim().Length != 14)
-                    {
-                        throw new Exception("ISBN deve conter 14 números!");
-                    }
-                    else
-                    {
-                        _isbn = value;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception("clsLivros: " + ex.Message);
-                }
-            }
+            set { _isbn = value; }
         }
 
         public int EditoraCodigo

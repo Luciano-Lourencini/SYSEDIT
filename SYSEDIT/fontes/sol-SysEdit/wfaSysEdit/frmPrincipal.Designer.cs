@@ -44,11 +44,11 @@ namespace wfaSysEdit
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarEditarApagarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ssPrincipal = new System.Windows.Forms.StatusStrip();
             this.tsslblSysEdit = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tmPrincipal = new System.Windows.Forms.Timer(this.components);
             this.tsslblTimer = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tmPrincipal = new System.Windows.Forms.Timer(this.components);
             this.msPrincipal.SuspendLayout();
             this.ssPrincipal.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +57,7 @@ namespace wfaSysEdit
             // 
             this.msPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editorasToolStripMenuItem,
-            this.ajudaToolStripMenuItem});
+            this.sobreToolStripMenuItem});
             this.msPrincipal.Location = new System.Drawing.Point(0, 0);
             this.msPrincipal.Name = "msPrincipal";
             this.msPrincipal.Size = new System.Drawing.Size(615, 24);
@@ -167,11 +167,12 @@ namespace wfaSysEdit
             this.buscarEditarApagarToolStripMenuItem2.Text = "&Buscar | Editar | Apagar";
             this.buscarEditarApagarToolStripMenuItem2.Click += new System.EventHandler(this.buscarEditarApagarToolStripMenuItem2_Click);
             // 
-            // ajudaToolStripMenuItem
+            // sobreToolStripMenuItem
             // 
-            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.ajudaToolStripMenuItem.Text = "&Ajuda";
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Text = "&Sobre";
+            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // ssPrincipal
             // 
@@ -191,18 +192,18 @@ namespace wfaSysEdit
             this.tsslblSysEdit.Size = new System.Drawing.Size(62, 17);
             this.tsslblSysEdit.Text = ".: SysEdit :.";
             // 
-            // tmPrincipal
-            // 
-            this.tmPrincipal.Enabled = true;
-            this.tmPrincipal.Interval = 1000;
-            this.tmPrincipal.Tick += new System.EventHandler(this.tmPrincipal_Tick);
-            // 
             // tsslblTimer
             // 
             this.tsslblTimer.BackColor = System.Drawing.Color.White;
             this.tsslblTimer.Name = "tsslblTimer";
             this.tsslblTimer.Size = new System.Drawing.Size(16, 17);
             this.tsslblTimer.Text = "...";
+            // 
+            // tmPrincipal
+            // 
+            this.tmPrincipal.Enabled = true;
+            this.tmPrincipal.Interval = 1000;
+            this.tmPrincipal.Tick += new System.EventHandler(this.tmPrincipal_Tick);
             // 
             // frmPrincipal
             // 
@@ -217,6 +218,7 @@ namespace wfaSysEdit
             this.MaximizeBox = false;
             this.Name = "frmPrincipal";
             this.Text = ".: SYSEDIT :: Sistema de Editoras :.";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.msPrincipal.ResumeLayout(false);
             this.msPrincipal.PerformLayout();
             this.ssPrincipal.ResumeLayout(false);
@@ -232,7 +234,7 @@ namespace wfaSysEdit
         private System.Windows.Forms.ToolStripMenuItem editorasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editorasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem autoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsCadastrar;
         private System.Windows.Forms.ToolStripMenuItem tsBuscarEditarApagar;

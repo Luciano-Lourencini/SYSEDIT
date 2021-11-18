@@ -45,5 +45,10 @@ namespace cl_bll
         {
             return dal.listarTodosArray();
         }
+
+        public clsUsuarios login(string email,string senha)
+        {
+            return dal.login(email,senha);
+        }
     }
 }

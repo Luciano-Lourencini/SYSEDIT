@@ -93,7 +93,7 @@ namespace wfaSysEdit
             dgUsuarios.ReadOnly = true;
             dgUsuarios.MultiSelect = false;
 
-            dgUsuarios.Columns[0].HeaderText = "Código";
+            //dgUsuarios.Columns[0].HeaderText = "Código";
             dgUsuarios.Columns[1].HeaderText = "CPF";
             dgUsuarios.Columns[2].HeaderText = "Nome";
             dgUsuarios.Columns[3].HeaderText = "Senha"; //tinha tirado por proteção, mas vai puxar na tela de qualquer jeito...
@@ -101,6 +101,7 @@ namespace wfaSysEdit
             dgUsuarios.Columns[5].HeaderText = "Telefone";
             dgUsuarios.Columns[6].HeaderText = "Observação";
 
+            dgUsuarios.Columns[0].Visible = false;
             //dgUsuarios.Columns[3].Visible = false;
         }
 
